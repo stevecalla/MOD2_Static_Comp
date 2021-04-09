@@ -52,13 +52,9 @@ nav {
   height: 5vh;
   width: 5vh;
   margin-left: 2vh;
-  /* padding-left: 5vh; */
 }
 
 .nav-icon2 {
-  /* height: 5vh;
-  width: 5vh;
-  margin-left: 2vh; */
   padding-left: 7vh;
 }
 
@@ -101,7 +97,9 @@ main {
     /* color: red; */
     border: .01em solid black;
     height: 50vh;
+    height: 375px;
     width: 22vw;
+    width: 325px;
     margin: 1vh;
     background: white;
     overflow: scroll;
