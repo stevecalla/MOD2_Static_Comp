@@ -1,0 +1,104 @@
+* {
+  /* border: .01em solid red; */
+}
+
+html, 
+body,
+.container {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;  
+}
+
+/* ---------------- MAIN --------------- */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+/* ---------------- HEADER / FOOTER --------------- */
+.header,
+.footer {
+  background-color: grey;
+  height: 10vh;
+}
+
+.content-b { background: green; }
+.content-a { background: lightgreen; }
+.content-c { background: yellow; }
+
+/* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
+@media screen and (max-width: 640px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 76vh;
+  }
+  
+  .container div {
+    flex: 1 0 auto;
+  }
+  
+  .container > .content-a {
+    flex: 2;
+  }
+  
+  .container > .content-b {
+    order: 0;
+  }
+}
+
+/* ----------------- DEFAULT MEDIUM SCREEN -------------- */
+@media screen and (min-width: 640px) and (max-width: 1024px){
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 76vh;
+  }
+
+  .container div {
+    flex: 1 0 auto;
+    /* height: 33%; */
+    width: 50%;
+  }
+
+  .container > .content-a {
+    display: flex;
+    width: 100%;
+    /* flex: 2; */
+  }
+
+  /* .container > .content-b {
+    order: 0;
+  } */
+}
+
+/* ----------------- MEDIA QUERY LARGE SCREEN -------------- */
+@media screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 76vh;
+  }
+  
+  .container div {
+    flex: 1 0 auto;
+    /* height: 50%;
+    width: 50%; */
+  }
+  
+  .container > .content-a {
+    flex: 2;
+  }
+  
+  .container > .content-b {
+    order: -1;
+  }
+}
+
