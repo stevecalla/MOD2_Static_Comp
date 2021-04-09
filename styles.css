@@ -23,6 +23,7 @@ body,
 }
 
 .admin {
+  display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 6vh;
@@ -80,37 +81,114 @@ main {
 /* ----------------- DEFAULT MEDIUM SCREEN -------------- */
 /* @media screen and (min-width: 640px) and (max-width: 1024px){ */
 
-  h1 {
-    margin-left: 2vw;
-  }
+h1 {
+  margin-left: 1.2vw;
+}
 
-  section {
-    /* border: .01em solid red; */
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    /* height: 200vh; */
-    overflow: scroll;
-  }
+.container {
+  /* border: .01em solid red; */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 70vh;
+  overflow: scroll;
+}
+
+.box1,
+.box {
+  /* color: red; */
+  border: .01em solid black;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  height: 50vh;
+  height: 425px;
+  width: 22vw;
+  width: 325px;
+  margin: 1vh;
+  background: white;
+  overflow: scroll;
+
+  position: relative;
+}
+
+.tint-overlay {
+  background-color: rgba(0,0,0,.2);
+  height: 196.6px;
+  width: 325px;
+  position: absolute;
+  z-index: 2;
+}
+
+.text-overlay-1 {
+  margin: 2vh;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  position: absolute;
+  z-index: 2;
+}
+
+.text-overlay-2 {
+  margin: 6vh;
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+  position: absolute;
+  z-index: 2;
+}
+
+.arrow-image {
+  height: 10vh;
+  width: 10vh;
+}
+
+.text-overlay-3 {
+  margin-top: 15vh;
+  margin-left: 2vh;
+  color: white;
+  position: absolute;
+  z-index: 3;
+}
+
+.container-image {
+  height: 25vh;
+  width: 100%;
+  z-index: 1;
+  background: 
+}
+
+.text{
+  margin-left: 1.5vh;
+  margin: .25vh 1.5vh .25vh 1.5vh; 
+}
+
+h6 {
+  font-size: .75rem;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+.url-box {
+  background: lightgray;
+  height: 5vh;
+  margin: 1vh 1.5vh 1vh 1.7vh;
+  text-align: center;
   
-  article {
-    /* color: red; */
-    border: .01em solid black;
-    height: 50vh;
-    height: 375px;
-    width: 22vw;
-    width: 325px;
-    margin: 1vh;
-    background: white;
-    overflow: scroll;
-  }
+}
 
-  .container-image {
-    width: 100%;
-  }
+.attachment-text {
+  margin: 4vh 1.5vh 1vh 1.7vh;
+}
 
-  .text {
-  }
+.attachment-number {
+  color: #689cc5;
+  font-size: 2rem;
+  font-weight: 900;
+}
 
  /* } */
 
