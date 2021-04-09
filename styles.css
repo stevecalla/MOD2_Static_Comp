@@ -13,25 +13,58 @@ body,
 
 /* ---------------- MAIN --------------- */
 .main-wrapper {
+  border: .01em solid red;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100vh;
+  overflow: scroll;
 }
 
-/* ---------------- HEADER / FOOTER --------------- */
-.header,
-.footer {
-  background-color: grey;
-  height: 10vh;
+/* ---------------- HEADER --------------- */
+.header {
+  background-color: rgb(32, 31, 31);
+  color: white;
+  height: 20vh;
 }
 
-.content-b { background: green; }
-.content-a { background: lightgreen; }
-.content-c { background: yellow; }
+/* ----------------- DEFAULT MEDIUM SCREEN -------------- */
+/* @media screen and (min-width: 640px) and (max-width: 1024px){ */
+
+  section {
+    border: .01em solid red;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80vh;
+    background: whitesmoke; 
+    overflow: auto;
+  }
+
+  .box1,
+  .box {
+    border: .01em solid black;
+    height: 50vh;
+    width: 20vw;
+    background: lightblue;
+  }
+
+  img {
+    border: .01em solid red;
+    height: 20vh;
+    width: 100%;
+  }
+
+  text {
+    border: .01em solid blue;
+    height: 80vh;
+    width: 100%;
+  }
+
+/* } */
 
 /* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
-@media screen and (max-width: 640px) {
+/* @media screen and (max-width: 640px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -50,36 +83,10 @@ body,
   .container > .content-b {
     order: 0;
   }
-}
-
-/* ----------------- DEFAULT MEDIUM SCREEN -------------- */
-@media screen and (min-width: 640px) and (max-width: 1024px){
-  .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 76vh;
-  }
-
-  .container div {
-    flex: 1 0 auto;
-    /* height: 33%; */
-    width: 50%;
-  }
-
-  .container > .content-a {
-    display: flex;
-    width: 100%;
-    /* flex: 2; */
-  }
-
-  /* .container > .content-b {
-    order: 0;
-  } */
-}
+} */
 
 /* ----------------- MEDIA QUERY LARGE SCREEN -------------- */
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
   .container {
     display: flex;
     flex-direction: row;
@@ -89,8 +96,6 @@ body,
   
   .container div {
     flex: 1 0 auto;
-    /* height: 50%;
-    width: 50%; */
   }
   
   .container > .content-a {
@@ -100,5 +105,5 @@ body,
   .container > .content-b {
     order: -1;
   }
-}
+} */
 
