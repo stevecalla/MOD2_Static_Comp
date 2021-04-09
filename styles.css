@@ -195,26 +195,73 @@ h5 {
  /* } */
 
 /* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
-/* @media screen and (max-width: 640px) {
-  .container {
+@media screen and (max-width: 1025px) {
+
+  h1 {
+    /* margin-left: 6.5vw; */
+    text-align: center;
+  }
+
+}
+
+/* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
+  @media screen and (max-width: 640px) { 
+
+  .header {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    color: white;
+    height: 20vh;
+  }
+  
+  .admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    margin-right: 3vh;
+    padding: 1vh;
+    font-size: 1.2rem;
+    color: #689cc5;
+  }
+  
+  .admin-image {
+    height: 5vh;
+    width: 5vh;
+    margin-left: 0;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
     flex-wrap: wrap;
-    height: 76vh;
   }
   
-  .container div {
-    flex: 1 0 auto;
+  .nav-icon {
+    height: 5vh;
+    width: 5vh;
+    margin-left: 2vh;
   }
   
-  .container > .content-a {
-    flex: 2;
+  .nav-icon2 {
+    padding-left: 1vh;
   }
   
-  .container > .content-b {
-    order: 0;
+  .logo-image {
+    display: flex;
+    align-self: flex-end;
+    margin-right: 5vh;
+    margin: 0;
+    margin-left: 5vh;
+    height: 10vh;
+    width: 15vh;
   }
-} */
+  
+}
 
 /* ----------------- MEDIA QUERY LARGE SCREEN -------------- */
 /* @media screen and (min-width: 1024px) {
