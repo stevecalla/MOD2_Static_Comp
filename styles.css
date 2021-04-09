@@ -1,6 +1,6 @@
-* {
-  /* border: .01em solid red; */
-}
+/* * {
+  border: .01em solid red;
+} */
 
 html, 
 body,
@@ -9,29 +9,113 @@ body,
   width: 100%;
   height: 100%;
   overflow: hidden;  
+  font-family: 'Roboto', sans-serif;
 }
 
-/* ---------------- MAIN --------------- */
-.main-wrapper {
+/* ---------------- HEADER --------------- */
+.header {
+  background-color: #2B2B2B;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+  justify-content: flex-start;
+  color: white;
+  height: 20vh;
 }
 
-/* ---------------- HEADER / FOOTER --------------- */
-.header,
-.footer {
-  background-color: grey;
-  height: 10vh;
+.admin {
+  justify-content: flex-end;
+  align-items: center;
+  height: 6vh;
+  margin-right: 3vh;
+  padding: 1vh;
+  font-size: 1.2rem;
+  color: #689cc5;
 }
 
-.content-b { background: green; }
-.content-a { background: lightgreen; }
-.content-c { background: yellow; }
+.admin-text {
+  /* margin-left: 2vw; */
+}
+
+.admin-image {
+  height: 5vh;
+  width: 5vh;
+  margin-left: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-icon {
+  height: 5vh;
+  width: 5vh;
+  margin-left: 2vh;
+}
+
+.nav-icon2 {
+  padding-left: 7vh;
+}
+
+.logo-image {
+  display: flex;
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: 5vh;
+  height: 15vh;
+  width: 20vh;
+}
+
+
+/* ---------------- MAIN --------------- */
+main {
+  border: .01em solid red;
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  background: whitesmoke; 
+}
+
+/* ----------------- DEFAULT MEDIUM SCREEN -------------- */
+/* @media screen and (min-width: 640px) and (max-width: 1024px){ */
+
+  h1 {
+    margin-left: 2vw;
+  }
+
+  section {
+    /* border: .01em solid red; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* height: 200vh; */
+    overflow: scroll;
+  }
+  
+  article {
+    /* color: red; */
+    border: .01em solid black;
+    height: 50vh;
+    height: 375px;
+    width: 22vw;
+    width: 325px;
+    margin: 1vh;
+    background: white;
+    overflow: scroll;
+  }
+
+  .container-image {
+    width: 100%;
+  }
+
+  .text {
+  }
+
+ /* } */
 
 /* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
-@media screen and (max-width: 640px) {
+/* @media screen and (max-width: 640px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -50,36 +134,10 @@ body,
   .container > .content-b {
     order: 0;
   }
-}
-
-/* ----------------- DEFAULT MEDIUM SCREEN -------------- */
-@media screen and (min-width: 640px) and (max-width: 1024px){
-  .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 76vh;
-  }
-
-  .container div {
-    flex: 1 0 auto;
-    /* height: 33%; */
-    width: 50%;
-  }
-
-  .container > .content-a {
-    display: flex;
-    width: 100%;
-    /* flex: 2; */
-  }
-
-  /* .container > .content-b {
-    order: 0;
-  } */
-}
+} */
 
 /* ----------------- MEDIA QUERY LARGE SCREEN -------------- */
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
   .container {
     display: flex;
     flex-direction: row;
@@ -89,8 +147,6 @@ body,
   
   .container div {
     flex: 1 0 auto;
-    /* height: 50%;
-    width: 50%; */
   }
   
   .container > .content-a {
@@ -100,5 +156,5 @@ body,
   .container > .content-b {
     order: -1;
   }
-}
+} */
 
