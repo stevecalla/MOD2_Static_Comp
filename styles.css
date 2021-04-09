@@ -115,7 +115,9 @@ h1 {
 .tint-overlay {
   background-color: rgba(0,0,0,.2);
   height: 196.6px;
+  height: 25vh;
   width: 325px;
+  width: 100%;
   position: absolute;
   z-index: 2;
 }
