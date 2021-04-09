@@ -11,15 +11,6 @@ body,
   overflow: hidden;  
 }
 
-/* ---------------- MAIN --------------- */
-.main-wrapper {
-  border: .01em solid red;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: scroll;
-}
-
 /* ---------------- HEADER --------------- */
 .header {
   background-color: rgb(32, 31, 31);
@@ -27,41 +18,50 @@ body,
   height: 20vh;
 }
 
+/* ---------------- MAIN --------------- */
+main {
+  border: .01em solid red;
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  background: whitesmoke; 
+}
+
 /* ----------------- DEFAULT MEDIUM SCREEN -------------- */
 /* @media screen and (min-width: 640px) and (max-width: 1024px){ */
 
-  section {
-    border: .01em solid red;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 80vh;
-    background: whitesmoke; 
-    overflow: auto;
+  h1 {
+    margin-left: 2vw;
   }
 
-  .box1,
-  .box {
+  section {
+    /* border: .01em solid red; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* height: 200vh; */
+    overflow: scroll;
+  }
+  
+  article {
+    color: red;
     border: .01em solid black;
     height: 50vh;
-    width: 20vw;
-    background: lightblue;
+    width: 22vw;
+    margin: 1vh;
+    background: white;
+    overflow: scroll;
   }
 
   img {
-    border: .01em solid red;
-    height: 20vh;
+    /* height: 20vh; */
     width: 100%;
   }
 
-  text {
-    border: .01em solid blue;
-    height: 80vh;
-    width: 100%;
+  .text {
   }
 
-/* } */
+ /* } */
 
 /* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
 /* @media screen and (max-width: 640px) {
