@@ -252,13 +252,20 @@ h5 {
   }
   
   .logo-image {
-    display: flex;
-    align-self: flex-end;
-    margin-right: 5vh;
-    margin: 0;
-    margin-left: 5vh;
+    display: none;
+  }
+
+  .logo-image2 {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    /* align-self: flex-end; */
+    /* margin-right: 5vh; */
+    /* margin: 0;
+    margin-left: 5vh; */
     height: 10vh;
-    width: 15vh;
+    width: 20vh;
   }
   
 }
