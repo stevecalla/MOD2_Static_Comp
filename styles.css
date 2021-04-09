@@ -84,12 +84,12 @@ main {
     margin-left: 2vw;
   }
 
-  section {
+  .container {
     /* border: .01em solid red; */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* height: 200vh; */
+    height: 70vh;
     overflow: scroll;
   }
   
@@ -97,7 +97,7 @@ main {
     /* color: red; */
     border: .01em solid black;
     height: 50vh;
-    height: 375px;
+    height: 425px;
     width: 22vw;
     width: 325px;
     margin: 1vh;
@@ -106,6 +106,7 @@ main {
   }
 
   .container-image {
+    height: 25vh;
     width: 100%;
   }
 
