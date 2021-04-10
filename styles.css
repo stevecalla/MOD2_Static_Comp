@@ -253,8 +253,8 @@ h5 {
     justify-content: center;
     align-content: center;
     /* align-items: center; */
-    flex-wrap: wrap;
-    height: 10vh;
+    /* flex-wrap: wrap; */
+    height: 5vh;
     margin: 0 auto;
     width: 75vw;
   }
