@@ -99,15 +99,12 @@ h1 {
   border: .01em solid black;
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
-  height: 50vh;
   height: 425px;
-  width: 22vw;
   width: 325px;
   margin: 1vh;
   background: white;
+  box-shadow: 5px 0px 5px gray;
   overflow: scroll;
-
   position: relative;
 }
 
@@ -249,11 +246,8 @@ h5 {
   
   nav {
     display: flex;
-    /* flex-direction: row; */
     justify-content: center;
     align-content: center;
-    /* align-items: center; */
-    /* flex-wrap: wrap; */
     height: 5vh;
     margin: 0 auto;
     width: 75vw;
