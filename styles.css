@@ -65,7 +65,7 @@ nav {
 
 /* ---------------- MAIN --------------- */
 main {
-  border: .01em solid red;
+  /* border: .01em solid red; */
   display: flex;
   flex-direction: column;
   background: whitesmoke; 
@@ -82,7 +82,7 @@ h1 {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  height: 70vh;
+  height: 66vh;
   overflow: scroll;
 }
 
@@ -181,14 +181,16 @@ h1 {
   height: 5vh;
   margin: 1vh 1.5vh 1vh 1.7vh;
   text-align: center;
-  
 }
 
-.attachment-number {
-  color: #689cc5;
-  font-size: 2rem;
-  font-weight: 900;
+.marvel-attribution {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  /* height: 100%; */
+  padding-right: 1vw;
 }
+
 
  /* } */
 
@@ -256,6 +258,11 @@ h1 {
   .logo-image {
     height: 20vh; 
     width: 25vh;
+  }
+
+  .marvel-attribution {
+    justify-content: center;
+    align-content: center;
   }
   
 }
