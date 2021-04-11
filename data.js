@@ -77,11 +77,10 @@
 const marvelCharacters = [
   { name: "Adam Warlock",
     desc: "Adam Warlock is an artificially created human who was born in a cocoon at a scientific complex called The Beehive to be part of a race of super humans who would abolish war, illness, and crime. He uses his immense and formidable powers to safeguard the universe.",
-
     comics: 188,
     stories: 217,
     image_url: "http://i.annihil.us/u/prod/marvel/i/mg/a/f0/5202887448860.jpg",
-    image_alt: "TBD",
+    image_alt: "Adam Warlock is an artificially created human",
     urls: [
       {type: "detail", url: "http://marvel.com/universe/Warlock,_Adam?utm_campa…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
       {type: "comiclink", url: "http://marvel.com/comics/characters/1010354/adam_w…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
@@ -92,7 +91,7 @@ const marvelCharacters = [
     comics: 45,
     stories: 52,
     image_url: "http://i.annihil.us/u/prod/marvel/i/mg/9/a0/4ce18a834b7f5.jpg",
-    image_alt: "TBD",
+    image_alt: "Collection of Atlas Foundation superheros",
     urls: [
       {type: "wiki", url: "http://marvel.com/universe/Agents_of_Atlas?utm_cam…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
       {type: "comiclink", url: "http://marvel.com/comics/characters/1011198/agents…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
@@ -103,7 +102,7 @@ const marvelCharacters = [
     comics: 28,
     stories: 30,
     image_url: "http://i.annihil.us/u/prod/marvel/i/mg/f/60/4c0042121d790.jpg",
-    image_alt: "TBD",
+    image_alt: "Agent Zero",
     urls: [
       {type: "detail", url: "http://marvel.com/characters/102/agent_zero?utm_ca…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
       {type: "comiclink", url: "http://marvel.com/comics/characters/1009150/agent_…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
@@ -115,7 +114,7 @@ const marvelCharacters = [
     comics: 3,
     stories: 7,
     image_url: "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg",
-    image_alt: "TBD",
+    image_alt: "A-Bomb",
     urls: [
       {type: "detail", url: "http://marvel.com/characters/76/a-bomb?utm_campaig…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
       {type: "comiclink", url: "http://marvel.com/comics/characters/1017100/a-bomb…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
@@ -126,7 +125,7 @@ const marvelCharacters = [
     comics: 12,
     stories: 21,
     image_url: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg",
-    image_alt: "TBD",
+    image_alt: "3-D Man",
     urls: [
       {type: "detail", url: "http://marvel.com/characters/74/3-d_man?utm_campai…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
       {type: "comiclink", url: "http://marvel.com/comics/characters/1011334/3-d_ma…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
@@ -137,7 +136,7 @@ const marvelCharacters = [
     comics: 91,
     stories: 104,
     image_url: "http://i.annihil.us/u/prod/marvel/i/mg/1/b0/5269678709fb7.jpg",
-    image_alt: "TBD",
+    image_alt: "Absorbing Man",
     urls: [
       {type: "detail", url: "http://marvel.com/characters/84/absorbing_man?utm_…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
       {type: "comiclink", url: "http://marvel.com/comics/characters/1009148/absorb…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
@@ -148,10 +147,10 @@ const marvelCharacters = [
     comics: 4,
     stories: 8,
     image_url: "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215.jpg",
-    image_alt: "TBD",
+    image_alt: "Ajak",
     urls: [
       {type: "detail", url: "http://marvel.com/characters/111/ajak?utm_campaign…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
-      {type: "detail", url: "http://marvel.com/characters/111/ajak?utm_campaign…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
+      {type: "comiclink", url: "http://marvel.com/comics/characters/1011176/ajak?u…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
     ],
   },
 
@@ -161,7 +160,7 @@ const marvelCharacters = [
     comics: 0,
     stories: 0,
     image_url: "http://i.annihil.us/u/prod/marvel/i/mg/b/70/4c0035adc7d3a.jpg",
-    image_alt: "TBD",
+    image_alt: "Ajaxis",
     urls: [
       {type: "detail", url: "http://marvel.com/characters/113/ajaxis?utm_campai…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
       {type: "comiclink", url: "http://marvel.com/comics/characters/1010870/ajaxis…piRef&utm_source=e2deecaf6c770a3c085bbc7ed4b93986"},
