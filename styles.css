@@ -64,8 +64,12 @@ nav {
   margin-left: 2vh;
 }
 
+.nav-links {
+  color: white;
+}
+
 .nav-icon2 {
-  padding-left: 7vh;
+  /* padding-left: 7vh; */
 }
 
 /* ---------------- MAIN --------------- */
@@ -180,7 +184,8 @@ h5 {
 }
 
 .attachment-text {
-  margin: 4vh 1.5vh 1vh 1.7vh;
+  /* margin: 4vh 1.5vh 1vh 1.7vh; */
+  /*NOT NECESSARY FOR MARVEL CHARACTERS*/
 }
 
 .attachment-number {
