@@ -52,17 +52,15 @@ function createCharacterCards() {
         <div class='image-box'>
           <div class='text-overlay-1'>VIEWS</div>
           <div class='text-overlay-2'>04</div>
-          <img class='text-overlay-3 arrow-image' src ="./assets/arrow-right-1.1s-200px.png"
-          alt="${marvelCharacters[i].image_alt}">
           <img class='container-image' src ="${marvelCharacters[i].image_url}"
-            alt="TBD">
+            alt="${marvelCharacters[i].image_alt}">
         </div>
-        <h5 class='text'>${marvelCharacters[i].name}</h5>
-        <h5 class='text'>${marvelCharacters[i].desc}</h5>
+        <h2 class='name-text'>${marvelCharacters[i].name}</h2>
+        <p class='description-text'>${marvelCharacters[i].desc}</p>
         <a class='text url-box' href="${marvelCharacters[i].urls[0].url}" target="_blank">Link to profile</a>
         <a class='text url-box' href="${marvelCharacters[i].urls[1].url}" target="_blank">Link to comics</a>
-        <h5 class='text attachment-text'>Comics Count: ${marvelCharacters[i].comics}</div>
-        <h5 class='text attachment-text'>Stories Count: ${marvelCharacters[i].stories}</div>
+        <p class='count-text'>Comic Count: ${marvelCharacters[i].comics}</p>
+        <p class='count-text'>Stories Count: ${marvelCharacters[i].stories}</p>
       </article>  
       `;
   }
