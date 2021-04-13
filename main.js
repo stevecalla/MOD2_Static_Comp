@@ -74,7 +74,7 @@ function renderCharacterCards(renderCards) {
   //   .then(character => console.log(character));
   // }
 
-  //------------------------------
+  //------------------------------ CODE WORKS TO GRAB SPECIFIC CHARACTERS BUT CAN'T GET THE TESTARRAY TO FILL IN THE CREATE CARDS FUNCTION ----
 
 //   let testArray = []; 
 
