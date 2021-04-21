@@ -141,11 +141,11 @@ main {
   margin-right: 0.5rem;
   margin: 0.5rem;
   margin-left: 0.2rem;
-  overflow: auto;
 }
 
 .character-checkbox {
   height: 25vh;
+  overflow: auto;
 }
 
 .submit-button {
