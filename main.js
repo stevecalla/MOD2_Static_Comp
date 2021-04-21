@@ -193,8 +193,6 @@ getCheckBoxInput.addEventListener('submit', submitCharacter);
 
 function loadDropDownAndCardsOnWindow() { //on window load
   createCharacterDropDownList();
-  // test3();
-  // getEachCharacter(test);
   getRandomCharactersOnWindowLoad(); //load random characters
 }
 
@@ -216,15 +214,12 @@ function renderDropdownList(list) { //what is this doing? === rendering the char
 }
 
 function getRandomCharactersOnWindowLoad() {
-  // event.preventDefault();
   //generate array with random numbers for the length of the array
   const randomNumberList = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 8; i++) {
     let randomNumber = Math.floor(Math.floor(Math.random() * test.length));
-    // console.log(randomNumber)
     randomNumberList.push(randomNumber);
   }
-  // console.log(randomNumberList)
 
   //grab those characters from the array if randomCheckbox Selected
   const test9 = [];
@@ -239,12 +234,10 @@ function getRandomCharactersOnSubmit(event) {
   event.preventDefault();
   //generate array with random numbers for the length of the array
   const randomNumberList = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 8; i++) {
     let randomNumber = Math.floor(Math.floor(Math.random() * test.length));
-    // console.log(randomNumber)
     randomNumberList.push(randomNumber);
   }
-  // console.log(randomNumberList)
 
   //grab those characters from the array if randomCheckbox Selected
   const test15 = [];
@@ -257,7 +250,6 @@ function getRandomCharactersOnSubmit(event) {
     console.log('test15', test15); 
     getEachCharacter(test15); 
   }
-  // createCharacterCards(test9);
 
   // all other checkboxes set to false
   if(randomCheckbox.checked) {
@@ -283,9 +275,8 @@ function getCharacterDataFromMarvelAPI(characterName) { //what is this doing? ==
 let testArray = []; 
 
 function createCharacterListDetails(response) { //what is this doing? === creating the array of character objects
-  // console.log('test7', response.data.results);
   response.data.results.forEach(character => testArray.push(character));
-  console.log('testarray', testArray);
+  // console.log('testarray', testArray);
   createCharacterCards(testArray);
 };
 
@@ -318,16 +309,10 @@ function renderCharacterCards(renderCards) { //what is this doing? === rendering
 }
 
 function searchCharacters() {
-  // console.log('a');
-  // console.log(getSearchBoxValue.value);
-  // console.log(marvelCharacters);
   const test10 = [];
   for (let i = 0; i < test.length; i++) {
-    // console.log(i, marvelCharacters[i].name);
-    // console.log((marvelCharacters[i].name.includes(getSearchBoxValue.value)))
     if (test[i].toUpperCase().includes(getSearchBoxValue.value.toUpperCase())) {
       test10.push(test[i])
-      // console.log('z', test10);
     }
   }
   createCharacterDropDownList2(test10);
@@ -353,20 +338,12 @@ function renderDropdownList(list) { //what is this doing? === rendering the char
 function submitCharacter(event) {
   event.preventDefault();
   checkedCharacters = document.querySelectorAll('#coding');
-  // console.log('a', checkedCharacters);
-
   testArray = [];
   for (let i = 0; i < checkedCharacters.length; i++) {
     if (checkedCharacters[i].checked && !randomCheckbox.checked) {
       let abc = getCharacterDataFromMarvelAPI(checkedCharacters[i].value); // this is the character list
     }
   }
-
-  // setTimeout(() => {
-  //   console.log('second')
-  //   createCharacterCards();
-  // }, 1000)
-
 }
   
 function toggleCharacterMenu() {
@@ -376,17 +353,6 @@ function toggleCharacterMenu() {
 //------------//
 //-------------//
 //functions above with API
-
-
-
-
-
-
-
-
-
-
-
 
 
 
