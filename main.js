@@ -226,7 +226,7 @@ function getRandomCharactersOnWindowLoad() {
   for (let i = 0; i < randomNumberList.length; i++) { 
     test9.push(test[randomNumberList[i]]);
   };
-  console.log('test9', test9); 
+  // console.log('test9', test9); 
   getEachCharacter(test9); 
 }
 
@@ -241,13 +241,13 @@ function getRandomCharactersOnSubmit(event) {
 
   //grab those characters from the array if randomCheckbox Selected
   const test15 = [];
-  console.log('a', randomCheckbox);
+  // console.log('a', randomCheckbox);
   if (randomCheckbox.checked) {
-    console.log('b', randomCheckbox);
+    // console.log('b', randomCheckbox);
     for (let i = 0; i < randomNumberList.length; i++) { 
       test15.push(test[randomNumberList[i]]);
     };
-    console.log('test15', test15); 
+    // console.log('test15', test15); 
     getEachCharacter(test15); 
   }
 
