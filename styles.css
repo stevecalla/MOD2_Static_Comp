@@ -67,7 +67,6 @@ nav {
 
 /* ---------------- MAIN --------------- */
 main {
-  /* border: .01em solid red; */
   display: flex;
   flex-direction: column;
   background: whitesmoke; 
