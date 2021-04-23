@@ -5,7 +5,6 @@ const selectCharacters = document.querySelector('#selectCharacters');
 const renderCheckBoxMenu = document.querySelector('#checkboxMenu');
 const getCheckBoxInput = document.querySelector('form');
 const getSearchBoxValue = document.querySelector('#searchInput')
-let checkedCharacters = document.querySelectorAll('#coding');
 const randomCheckbox = document.querySelector('#randomCheckbox');
 
 // global variables below
@@ -78,6 +77,7 @@ function getRandomCharactersOnSubmit(event) {
   }
 
   // all other checkboxes set to false
+  const checkedCharacters = document.querySelectorAll('#coding');
   if(randomCheckbox.checked) {
     for (var i = 0; i < checkedCharacters.length; i++) { 
       checkedCharacters[i].checked = false;
@@ -161,7 +161,7 @@ function renderDropdownList(list) { //what is this doing? === rendering the char
 
 function submitCharacter(event) {
   event.preventDefault();
-  checkedCharacters = document.querySelectorAll('#coding');
+  const checkedCharacters = document.querySelectorAll('#coding');
   testArray = [];
   for (let i = 0; i < checkedCharacters.length; i++) {
     if (checkedCharacters[i].checked && !randomCheckbox.checked) {
