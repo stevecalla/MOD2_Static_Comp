@@ -27,8 +27,8 @@ function createCharacterDropDownList() { //what is this doing? creating the char
   for (let i = 0; i < test.length; i++) {
     list += 
       `
-      <input type='checkbox' id='coding' name='interest' value='${test[i]}'>
-      <label for='coding'>${test[i]}</label>
+      <input type='checkbox' id='checkBox' name='interest' value='${test[i]}'>
+      <label for='checkBox'>${test[i]}</label>
       <br>
       `;
   }
@@ -77,7 +77,7 @@ function getRandomCharactersOnSubmit(event) {
   }
 
   // all other checkboxes set to false
-  const checkedCharacters = document.querySelectorAll('#coding');
+  const checkedCharacters = document.querySelectorAll('#checkBox');
   if(randomCheckbox.checked) {
     for (var i = 0; i < checkedCharacters.length; i++) { 
       checkedCharacters[i].checked = false;
@@ -147,8 +147,8 @@ function createCharacterDropDownList2(data) { //what is this doing? creating the
   for (let i = 0; i < data.length; i++) {
     list += 
       `
-      <input type='checkbox' id='coding' name='interest' value='${data[i]}'>
-      <label for='coding'>${data[i]}</label>
+      <input type='checkbox' id='checkBox' name='interest' value='${data[i]}'>
+      <label for='checkBox'>${data[i]}</label>
       <br>
       `;
   }
@@ -161,7 +161,7 @@ function renderDropdownList(list) { //what is this doing? === rendering the char
 
 function submitCharacter(event) {
   event.preventDefault();
-  const checkedCharacters = document.querySelectorAll('#coding');
+  const checkedCharacters = document.querySelectorAll('#checkBox');
   testArray = [];
   for (let i = 0; i < checkedCharacters.length; i++) {
     if (checkedCharacters[i].checked && !randomCheckbox.checked) {
