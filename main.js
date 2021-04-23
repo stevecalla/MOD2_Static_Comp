@@ -4,7 +4,7 @@ const populateCheckboxList = document.querySelector('#populateCheckbox');
 const selectCharacters = document.querySelector('#selectCharacters');
 const renderCheckBoxMenu = document.querySelector('#checkboxMenu');
 const getCheckBoxInput = document.querySelector('form');
-const getSearchBoxInput = document.querySelector('#searchInput')
+const getSearchBoxInput = document.querySelector('#searchInput');
 const randomCheckbox = document.querySelector('#randomCheckbox');
 
 // global variables below
@@ -18,26 +18,27 @@ getCheckBoxInput.addEventListener('submit', submitCharacter);
 
 
 function loadDropDownAndCardsOnWindow() {
-  createCharacterCheckboxList();
-  getRandomCharactersOnWindowLoad(); //load random characters
+  createCharacterCheckboxList(characters);
+  getRandomCharactersOnWindowLoad();
 }
 
-//eliminate duplicate function at 146?
-function createCharacterCheckboxList() { //what is this doing? creating the character dropdown characterList from the characterList of characters
-  let characterList = '';
-  for (let i = 0; i < characters.length; i++) {
-    characterList += 
+function createCharacterCheckboxList(currentCharacters) {
+  let currentCharacterList = '';
+  for (let i = 0; i < currentCharacters.length; i++) {
+    currentCharacterList += 
       `
-      <input type='checkbox' id='checkBox' name='interest' value='${characters[i]}'>
-      <label for='checkBox'>${characters[i]}</label>
+      <label>
+        <input type='checkbox' id='checkBox' value='${currentCharacters[i]}'>
+        ${currentCharacters[i]}
+      </label>
       <br>
       `;
   }
-  renderDropdownList(characterList);
+  renderDropdownList(currentCharacterList);
 }
 
-function renderDropdownList(characterList) { //what is this doing? === rendering the character drop down selection characterList
-  populateCheckboxList.innerHTML = characterList;
+function renderDropdownList(currentCharacterList) {
+  populateCheckboxList.innerHTML = currentCharacterList;
 }
 
 function getRandomCharactersOnWindowLoad() {
@@ -84,6 +85,9 @@ function getRandomCharactersOnSubmit(event) {
       checkedCharacters[i].checked = false;
     };
   }
+
+  //set search value = "";
+  getSearchBoxInput.innerText.value = "";
 }
 
 function getEachCharacter(data) {
@@ -140,24 +144,7 @@ function searchCharacters() {
       test10.push(characters[i])
     }
   }
-  createCharacterDropDownList2(test10);
-}
-
-function createCharacterDropDownList2(data) { //what is this doing? creating the character dropdown characterList from the characterList of characters
-  var characterList = '';
-  for (let i = 0; i < data.length; i++) {
-    characterList += 
-      `
-      <input type='checkbox' id='checkBox' name='checkBox' value='${data[i]}'>
-      <label for='checkBox'>${data[i]}</label>
-      <br>
-      `;
-  }
-  renderDropdownList(characterList);
-}
-
-function renderDropdownList(characterList) { //what is this doing? === rendering the character drop down selection characterList
-  populateCheckboxList.innerHTML = characterList;
+  createCharacterCheckboxList(test10);
 }
 
 function submitCharacter(event) {
