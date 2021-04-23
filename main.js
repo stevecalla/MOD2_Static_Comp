@@ -1,10 +1,10 @@
 // variables for querySelectors below
-const cards = document.querySelector('#box');
-const dropDownList = document.querySelector('#populateCheckbox');
+const cards = document.querySelector('#box'); //adjust id name
+const populateCheckboxList = document.querySelector('#populateCheckbox');
 const selectCharacters = document.querySelector('#selectCharacters');
 const renderCheckBoxMenu = document.querySelector('#checkboxMenu');
 const getCheckBoxInput = document.querySelector('form');
-const getSearchBoxValue = document.querySelector('#searchInput')
+const getSearchBoxInput = document.querySelector('#searchInput')
 const randomCheckbox = document.querySelector('#randomCheckbox');
 
 // global variables below
@@ -12,45 +12,46 @@ const randomCheckbox = document.querySelector('#randomCheckbox');
 // event listeners below
 window.addEventListener('load', loadDropDownAndCardsOnWindow);
 selectCharacters.addEventListener('click', toggleCharacterMenu);
-getSearchBoxValue.addEventListener('input', searchCharacters);
+getSearchBoxInput.addEventListener('input', searchCharacters);
 getCheckBoxInput.addEventListener('submit', getRandomCharactersOnSubmit);
 getCheckBoxInput.addEventListener('submit', submitCharacter);
 
 
-function loadDropDownAndCardsOnWindow() { //on window load
-  createCharacterDropDownList();
+function loadDropDownAndCardsOnWindow() {
+  createCharacterCheckboxList();
   getRandomCharactersOnWindowLoad(); //load random characters
 }
 
-function createCharacterDropDownList() { //what is this doing? creating the character dropdown list from the list of characters
-  var list = '';
-  for (let i = 0; i < test.length; i++) {
-    list += 
+//eliminate duplicate function at 146?
+function createCharacterCheckboxList() { //what is this doing? creating the character dropdown characterList from the characterList of characters
+  let characterList = '';
+  for (let i = 0; i < characters.length; i++) {
+    characterList += 
       `
-      <input type='checkbox' id='checkBox' name='interest' value='${test[i]}'>
-      <label for='checkBox'>${test[i]}</label>
+      <input type='checkbox' id='checkBox' name='interest' value='${characters[i]}'>
+      <label for='checkBox'>${characters[i]}</label>
       <br>
       `;
   }
-  renderDropdownList(list);
+  renderDropdownList(characterList);
 }
 
-function renderDropdownList(list) { //what is this doing? === rendering the character drop down selection list
-  dropDownList.innerHTML = list;
+function renderDropdownList(characterList) { //what is this doing? === rendering the character drop down selection characterList
+  populateCheckboxList.innerHTML = characterList;
 }
 
 function getRandomCharactersOnWindowLoad() {
   //generate array with random numbers for the length of the array
   const randomNumberList = [];
   for (let i = 0; i < 8; i++) {
-    let randomNumber = Math.floor(Math.floor(Math.random() * test.length));
+    let randomNumber = Math.floor(Math.floor(Math.random() * characters.length));
     randomNumberList.push(randomNumber);
   }
 
   //grab those characters from the array if randomCheckbox Selected
   const test9 = [];
   for (let i = 0; i < randomNumberList.length; i++) { 
-    test9.push(test[randomNumberList[i]]);
+    test9.push(characters[randomNumberList[i]]);
   };
   getEachCharacter(test9); 
 }
@@ -60,7 +61,7 @@ function getRandomCharactersOnSubmit(event) {
   //generate array with random numbers for the length of the array
   const randomNumberList = [];
   for (let i = 0; i < 8; i++) {
-    let randomNumber = Math.floor(Math.floor(Math.random() * test.length));
+    let randomNumber = Math.floor(Math.floor(Math.random() * characters.length));
     randomNumberList.push(randomNumber);
   }
 
@@ -70,7 +71,7 @@ function getRandomCharactersOnSubmit(event) {
   if (randomCheckbox.checked) {
     // console.log('b', randomCheckbox);
     for (let i = 0; i < randomNumberList.length; i++) { 
-      test15.push(test[randomNumberList[i]]);
+      test15.push(characters[randomNumberList[i]]);
     };
     // console.log('test15', test15); 
     getEachCharacter(test15); 
@@ -134,29 +135,29 @@ function renderCharacterCards(renderCards) { //what is this doing? === rendering
 
 function searchCharacters() {
   const test10 = [];
-  for (let i = 0; i < test.length; i++) {
-    if (test[i].toUpperCase().includes(getSearchBoxValue.value.toUpperCase())) {
-      test10.push(test[i])
+  for (let i = 0; i < characters.length; i++) {
+    if (characters[i].toUpperCase().includes(getSearchBoxInput.value.toUpperCase())) {
+      test10.push(characters[i])
     }
   }
   createCharacterDropDownList2(test10);
 }
 
-function createCharacterDropDownList2(data) { //what is this doing? creating the character dropdown list from the list of characters
-  var list = '';
+function createCharacterDropDownList2(data) { //what is this doing? creating the character dropdown characterList from the characterList of characters
+  var characterList = '';
   for (let i = 0; i < data.length; i++) {
-    list += 
+    characterList += 
       `
-      <input type='checkbox' id='checkBox' name='interest' value='${data[i]}'>
+      <input type='checkbox' id='checkBox' name='checkBox' value='${data[i]}'>
       <label for='checkBox'>${data[i]}</label>
       <br>
       `;
   }
-  renderDropdownList(list);
+  renderDropdownList(characterList);
 }
 
-function renderDropdownList(list) { //what is this doing? === rendering the character drop down selection list
-  dropDownList.innerHTML = list;
+function renderDropdownList(characterList) { //what is this doing? === rendering the character drop down selection characterList
+  populateCheckboxList.innerHTML = characterList;
 }
 
 function submitCharacter(event) {
@@ -165,7 +166,7 @@ function submitCharacter(event) {
   testArray = [];
   for (let i = 0; i < checkedCharacters.length; i++) {
     if (checkedCharacters[i].checked && !randomCheckbox.checked) {
-      let abc = getCharacterDataFromMarvelAPI(checkedCharacters[i].value); // this is the character list
+      let abc = getCharacterDataFromMarvelAPI(checkedCharacters[i].value); // this is the character characterList
     }
   }
 }
