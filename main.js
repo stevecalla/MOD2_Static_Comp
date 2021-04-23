@@ -87,7 +87,11 @@ function getRandomCharactersOnSubmit(event) {
   }
 
   //set search value = "";
-  getSearchBoxInput.innerText.value = "";
+  // getSearchBoxInput.innerText.value = "";
+  if(randomCheckbox.checked) {
+    getSearchBoxInput.value = "";
+    createCharacterCheckboxList(characters);
+  }  
 }
 
 function getEachCharacter(data) {
@@ -160,4 +164,5 @@ function submitCharacter(event) {
   
 function toggleCharacterMenu() {
   renderCheckBoxMenu.classList.toggle('show');
+  createCharacterCheckboxList(characters);
 }
