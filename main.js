@@ -6,6 +6,7 @@ const renderCheckBoxMenu = document.querySelector('#checkboxMenu');
 const getCheckBoxInput = document.querySelector('form');
 const getSearchBoxInput = document.querySelector('#searchInput');
 const randomCheckbox = document.querySelector('#randomCheckbox');
+const randomNumberText = document.querySelector('#changeText');
 
 // global variables below
 let renderCharacterList = []; //refactor
@@ -38,16 +39,21 @@ function getRandomCharacters() {
 }
 
 function createRandomNumbers(randomNumbers) {
-  for (let i = 0; i < 8; i++) {
-    let randomNumber = Math.floor(Math.floor(Math.random() * characters.length));
-    randomNumbers.push(randomNumber);
+  // const randomCount = window.prompt();
+  const randomCount = 8;
+  for (let i = 0; i < randomCount; i++) {
+    randomNumbers.push(Math.floor(Math.floor(Math.random() * characters.length)));
   }
+  // console.log(randomNumberText);
+  // randomNumberText.innerText = `Get ${randomCount} Random Characters`;
+}
+
+function inputNumberOfCharacters() {
+  //create
 }
 
 function convertRandomNumbersToCharacters(randomNumbers, randomCharacters) {
-  for (let i = 0; i < randomNumbers.length; i++) { 
-    randomCharacters.push(characters[randomNumbers[i]]);
-  };
+  randomNumbers.forEach(number => randomCharacters.push(characters[number]));
 }
 
 function createCharacterCheckboxList(currentCharacters) {
