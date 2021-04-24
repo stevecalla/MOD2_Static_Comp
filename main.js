@@ -1,12 +1,12 @@
 // variables for querySelectors below
-const cards = document.querySelector('#box'); //adjust id name
+const characterCards = document.querySelector('#characterBox'); //adjust id name
 const populateCheckboxList = document.querySelector('#populateCheckbox');
 const selectCharacters = document.querySelector('#selectCharacters');
 const renderCheckBoxMenu = document.querySelector('#checkboxMenu');
 const getCheckBoxInput = document.querySelector('form');
 const getSearchBoxInput = document.querySelector('#searchInput');
 const randomCheckbox = document.querySelector('#randomCheckbox');
-const randomNumberText = document.querySelector('#changeText');
+// const randomNumberText = document.querySelector('#randomNumberText');
 
 // global variables below
 let renderCharacterList = []; //refactor
@@ -103,7 +103,7 @@ function createCharacterListDetails(response) { //what is this doing? === creati
   createCharacterCards(renderCharacterList);
 };
 
-function createCharacterCards(data) { //what is this doing? === creating the character cards to render in the DOM
+function createCharacterCards(data) { //what is this doing? === creating the character characterCards to render in the DOM
   // console.log('c=', data);
   let characterCards = '';
   for (let i = 0; i < data.length; i++) {
@@ -127,8 +127,8 @@ function createCharacterCards(data) { //what is this doing? === creating the cha
   renderCharacterCards(characterCards);
 }
 
-function renderCharacterCards(renderCards) { //what is this doing? === rendering the character cards
-  cards.innerHTML = renderCards;
+function renderCharacterCards(renderCharacterCards) {
+  characterCards.innerHTML = renderCharacterCards;
 }
 
 function searchCharacters() {

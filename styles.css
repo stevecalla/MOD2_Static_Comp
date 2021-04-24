@@ -1,6 +1,6 @@
 html, 
 body,
-.container {
+.character-boxes {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -147,7 +147,7 @@ main {
   background-size: contain;
   background-color: white;
   width: 14.7rem;
-  overflow: hidden;
+  overflow:hidden;
 }
 
 .random-checkbox,
@@ -183,7 +183,7 @@ h1 {
   margin-left: 1.2vw;
 }
 
-.container {
+.character-boxes {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -355,7 +355,7 @@ input {
     margin-left: 1vh;
   }
 
-  .container {
+  .character-boxes {
     height: 60vh;
   }
   
