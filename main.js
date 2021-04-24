@@ -12,9 +12,9 @@ let renderCharacterList = []; //refactor
 
 // event listeners below
 window.addEventListener('load', getRandomCharactersOnWindowLoad);
-selectCharacters.addEventListener('click', toggleCharacterMenu);
-getSearchBoxInput.addEventListener('input', searchCharacters);
 getCheckBoxInput.addEventListener('submit', getCharactersOnSubmit);
+getSearchBoxInput.addEventListener('input', searchCharacters);
+selectCharacters.addEventListener('click', toggleCharacterMenu);
 
 function getRandomCharactersOnWindowLoad() {
   getRandomCharacters();
@@ -28,7 +28,7 @@ function getCharactersOnSubmit(event) {
 function getRandomCharacters() {
   const randomNumbers = [];
   const randomCharacters = [];
-  console.log('a=', randomCharacters);
+  // console.log('a=', randomCharacters);
   createRandomNumbers(randomNumbers);
   convertRandomNumbersToCharacters(randomNumbers, randomCharacters);
   getEachCharacterFromMarvelAPI(randomCharacters); 
@@ -98,7 +98,7 @@ function createCharacterListDetails(response) { //what is this doing? === creati
 };
 
 function createCharacterCards(data) { //what is this doing? === creating the character cards to render in the DOM
-  console.log('c=', data);
+  // console.log('c=', data);
   let characterCards = '';
   for (let i = 0; i < data.length; i++) {
     characterCards += 
@@ -126,17 +126,17 @@ function renderCharacterCards(renderCards) { //what is this doing? === rendering
 }
 
 function searchCharacters() {
-  const test10 = [];
-  for (let i = 0; i < characters.length; i++) {
-    if (characters[i].toUpperCase().includes(getSearchBoxInput.value.toUpperCase())) {
-      test10.push(characters[i])
-    }
-  }
-  createCharacterCheckboxList(test10);
-  //when input in search box move checkbox on 8 random characters
+  const searchCharactersDropDownList = [];
+  characters.forEach(character => {
+    if (character.toUpperCase().includes(getSearchBoxInput.value.toUpperCase())) {
+      searchCharactersDropDownList.push(character)  
+    };
+  })
+  createCharacterCheckboxList(searchCharactersDropDownList);
+  randomCheckbox.checked ? randomCheckbox.checked = false : randomCheckbox.checked;
 }
   
-function toggleCharacterMenu() { //refactor
+function toggleCharacterMenu() {
   renderCheckBoxMenu.classList.toggle('show');
   randomCheckbox.checked = false;
   createCharacterCheckboxList(characters);
