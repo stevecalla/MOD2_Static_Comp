@@ -116,9 +116,12 @@ main {
 }
 
 .search-bar {
-  display: flex;
-  margin: 0.5rem;
-  margin-left: 0.2rem;
+  /* display: flex; */
+  /* margin: 0.5rem; */
+  /* margin-left: 0.2rem; */
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .cloak {
@@ -131,20 +134,30 @@ main {
 }
 
 .search-input {
+  border: none;
   height: 6vh;
   width: 100%;
-  font-size: 1.25rem;
   margin: 0;
   padding: 0;
-  border: none;
+  padding-left: 3rem;
+  font-size: 1.25rem;
   border-radius: 0;
+  /* text-indent: 3rem; */
+  background: url(./assets/magnify-1.1s-200px.png) no-repeat;
+  background-size: contain;
+  background-color: white;
+  width: 14.7rem;
+  overflow: hidden;
 }
 
 .random-checkbox,
 .character-checkbox {
+  /* margin-right: 0.5rem;
+  margin: 0.5rem; */
+  /* margin-left: 0.2rem; */
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
   margin-right: 0.5rem;
-  margin: 0.5rem;
-  margin-left: 0.2rem;
 }
 
 .character-checkbox {
