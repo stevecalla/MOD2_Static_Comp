@@ -16,7 +16,6 @@ getSearchBoxInput.addEventListener('input', searchCharacters);
 getCheckBoxInput.addEventListener('submit', getRandomCharactersOnSubmit);
 getCheckBoxInput.addEventListener('submit', submitCheckedCharacter);
 
-
 function getRandomCharactersOnWindowLoad() {
   getRandomCharacters();
 }
@@ -95,7 +94,6 @@ function getCharacterDataFromMarvelAPI(characterName) { //what is this doing? ==
   .then(response => createCharacterListDetails(response))
   .then(character => character);
 }
-
 
 function createCharacterListDetails(response) { //what is this doing? === creating the array of character objects
   response.data.results.forEach(character => testArray.push(character));
