@@ -21,10 +21,7 @@ function getRandomCharactersOnWindowLoad() {
   getRandomCharacters();
 }
 
-// function getRandomCharactersOnSubmit(event) {
-//   event.preventDefault();
 function getRandomCharactersOnSubmit() {
-  // randomCheckbox.checked = true;
   if (randomCheckbox.checked) {
     getRandomCharacters();
   }  
