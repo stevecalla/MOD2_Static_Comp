@@ -27,6 +27,11 @@ function getRandomCharactersOnWindowLoad() {
 function getCharactersOnSubmit(event) {
   event.preventDefault();
   randomCheckbox.checked ? getRandomCharacters() : getCheckedCharacter();
+  // let count = 5;
+  // setTimeout( function() {
+  toggleCharacterMenu();
+  //   console.log(count--);
+  // }, 5000);
 }
 
 function getRandomCharacters() {
