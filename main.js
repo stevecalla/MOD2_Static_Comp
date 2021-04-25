@@ -6,6 +6,7 @@ const renderCheckBoxMenu = document.querySelector('#checkboxMenu');
 const getCheckBoxInput = document.querySelector('form');
 const getSearchBoxInput = document.querySelector('#searchInput');
 const randomCheckbox = document.querySelector('#randomCheckbox');
+const renderClearIcon = document.querySelector('#clearIcon');
 // const randomNumberText = document.querySelector('#randomNumberText');
 
 // global variables below
@@ -16,6 +17,7 @@ window.addEventListener('load', getRandomCharactersOnWindowLoad);
 getCheckBoxInput.addEventListener('submit', getCharactersOnSubmit);
 getSearchBoxInput.addEventListener('input', searchCharacters);
 selectCharacters.addEventListener('click', toggleCharacterMenu);
+renderClearIcon.addEventListener('click', TBD);
 
 function getRandomCharactersOnWindowLoad() {
   getRandomCharacters();
@@ -140,6 +142,16 @@ function searchCharacters() {
   })
   createCharacterCheckboxList(searchCharactersDropDownList);
   randomCheckbox.checked ? randomCheckbox.checked = false : randomCheckbox.checked;
+  if (getSearchBoxInput.value) {
+    renderClearIcon.classList.add('show');
+    renderClearIcon.classList.remove('hidden');
+  }
+}
+
+function TBD() {
+  getSearchBoxInput.value = '';
+  renderClearIcon.classList.remove('show');
+  renderClearIcon.classList.add('hidden');
 }
   
 function toggleCharacterMenu() {
