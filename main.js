@@ -2,6 +2,7 @@
 const characterCards = document.querySelector('#characterBox'); //adjust id name
 const populateCheckboxList = document.querySelector('#populateCheckbox');
 const selectCharacters = document.querySelector('#selectCharacters');
+const renderCheckBoxArrow = document.querySelector('#checkboxArrow');
 const renderCheckBoxMenu = document.querySelector('#checkboxMenu');
 const getCheckBoxInput = document.querySelector('form');
 const getSearchBoxInput = document.querySelector('#searchInput');
@@ -158,6 +159,8 @@ function hideClearIcon() {
   
 function toggleCharacterMenu() {
   renderCheckBoxMenu.classList.toggle('show');
+  renderCheckBoxArrow.classList.toggle('show');
   randomCheckbox.checked = false;
   createCharacterCheckboxList(characters);
+  getSearchBoxInput.value = '';
 }
