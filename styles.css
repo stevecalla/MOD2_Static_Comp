@@ -137,9 +137,9 @@ main {
   margin: 0.5rem;
 }
 
-/* .cloak {
+.cloak {
   visibility: hidden;
-} */
+}
 
 .hidden {
   display: none;
@@ -208,6 +208,16 @@ button:hover {
 
 h1 {
   margin-left: 1.2vw;
+}
+
+.animation-containter {
+  display: flex;
+  justify-content: center;
+}
+
+.get-message-animation {
+  height: 20vh;
+  width: 20vh;
 }
 
 .character-boxes {

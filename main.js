@@ -1,5 +1,5 @@
 // variables for querySelectors below
-const characterCards = document.querySelector('#characterBox'); //adjust id name
+const characterCards = document.querySelector('#characterBox');
 const populateCheckboxList = document.querySelector('#populateCheckbox');
 const selectCharacters = document.querySelector('#selectCharacters');
 const renderCheckBoxArrow = document.querySelector('#checkboxArrow');
@@ -22,16 +22,29 @@ clearIcon.addEventListener('click', hideClearIcon);
 
 function getRandomCharactersOnWindowLoad() {
   getRandomCharacters();
+  setTimeout( function() {
+    animationContainter.classList.toggle('show');
+    animationContainter2.classList.toggle('show');
+  }, 1000);
+  animationContainter.classList.toggle('show');
+  animationContainter2.classList.toggle('show');
+  // characterCards.classList.toggle('hidden');
 }
+
+var animationContainter = document.querySelector('.animation-containter');
+var animationContainter2 = document.querySelector('.get-message-animation');
 
 function getCharactersOnSubmit(event) {
   event.preventDefault();
   randomCheckbox.checked ? getRandomCharacters() : getCheckedCharacter();
-  // let count = 5;
-  // setTimeout( function() {
   toggleCharacterMenu();
-  //   console.log(count--);
-  // }, 5000);
+  setTimeout( function() {
+    animationContainter.classList.toggle('show');
+    animationContainter2.classList.toggle('show');
+  }, 1000);
+  animationContainter.classList.toggle('show');
+  animationContainter2.classList.toggle('show');
+  characterCards.classList.toggle('hidden');
 }
 
 function getRandomCharacters() {
@@ -136,7 +149,9 @@ function createCharacterCards(data) { //what is this doing? === creating the cha
 }
 
 function renderCharacterCards(renderCharacterCards) {
-  characterCards.innerHTML = renderCharacterCards;
+  setTimeout(() => {
+    characterCards.innerHTML = renderCharacterCards;
+  }, 1000);
 }
 
 function searchCharacters() {
@@ -169,3 +184,15 @@ function toggleCharacterMenu() {
   createCharacterCheckboxList(characters);
   getSearchBoxInput.value = '';
 }
+
+// function show(element) {
+//   element.classList.remove('hidden');
+// }
+
+// function hide(element) {
+//   element.classList.add('hidden');
+// }
+
+// function revealResetMessage() {
+//   show(resetMessage);
+// }
