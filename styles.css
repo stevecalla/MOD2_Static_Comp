@@ -176,7 +176,6 @@ main {
 label:hover,
 input:hover,
 button:hover {
-  border: 0.2 solid red;
   cursor: pointer;  
 } 
 
