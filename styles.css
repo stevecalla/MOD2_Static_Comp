@@ -116,6 +116,20 @@ main {
   top: 11vh;
   margin-right: 0.75rem;
   /* margin-top: 1rem; */
+  margin-top: .5rem;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid black;
+  position: absolute;
+  z-index: 4;
+  right: 40px;
+  top: 9.5vh;
+  margin-top: .5rem;
 }
 
 .search-bar {
@@ -153,7 +167,7 @@ main {
   padding: 0;
   font-size: 1.25rem;
   border-radius: 0;
-  width: 14.7rem;
+  /* width: 14.7rem; */
   overflow: hidden;
 }
 
@@ -408,9 +422,29 @@ input {
     margin-right: 1.75rem;
   }
 
+  .arrow-up {
+    /* width: 0; 
+    height: 0; 
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid black;
+    position: absolute;
+    z-index: 4;
+    right: 40px;
+    top: 9.5vh;
+    margin-top: .5rem; */
+
+    top: 14vh;
+    margin-right: 1.75rem;
+
+    top: 14.2vh;
+    margin-right: 7.5rem;
+  }
+
   .select-characters {
     margin: 0;
     margin-bottom: 1rem;
+    height: 2rem;
   }
 
   .marvel-attribution {
