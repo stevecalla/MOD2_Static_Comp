@@ -81,22 +81,28 @@ main {
 }
 
 .select-characters {
-  margin-left: auto;
-  padding: 2px;
-  margin: 0.5rem .75rem 0.5rem auto;
   border: none;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;;
+  height: 4rem;
+  width: 11rem;
+  margin-left: auto;
+  margin: 0.5rem .75rem 0.5rem auto;
+  padding: 2px;
   padding-left: .75rem;
   padding-right: .75rem;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
 }
 
-/* .select-characters:hover {
+.select-characters:hover {
   /* background-color: black; */
   /* border: 2px solid white; */
-/* }  */
+  /* border: 0.1rem solid black; */
+  box-sizing: border-box;
+  cursor: pointer;  
+  /* cursor: pointer; */
+} 
 
 .checkbox-menu {
   display: none;
@@ -142,6 +148,7 @@ main {
 .clear-icon:hover {
   border: 0.1rem solid black;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .search-input {
