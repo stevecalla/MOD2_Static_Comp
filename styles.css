@@ -1,6 +1,6 @@
 html, 
 body,
-.container {
+.character-boxes {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -113,38 +113,59 @@ main {
   right: 0px;
   top: 11vh;
   margin-right: 0.5rem;
+  margin-top: 1rem;
 }
 
 .search-bar {
   display: flex;
   margin: 0.5rem;
-  margin-left: 0.2rem;
+  /* margin-left: 0.2rem; */
+  /* margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem; */
 }
 
-.cloak {
+/* .cloak {
   visibility: hidden;
+} */
+
+.hidden {
+  display: none;
 }
 
-.search-icon {
+.search-icon,
+.clear-icon {
   height: 6vh;
   width: 6vh;
 }
 
+.clear-icon:hover {
+  border: 0.1rem solid black;
+  box-sizing: border-box;
+}
+
 .search-input {
+  display: flex;
+  border: none;
   height: 6vh;
-  width: 100%;
-  font-size: 1.25rem;
+  /* width: 100%; */
+  width: 15.2rem;
   margin: 0;
   padding: 0;
-  border: none;
+  font-size: 1.25rem;
   border-radius: 0;
+  width: 14.7rem;
+  overflow: hidden;
 }
 
 .random-checkbox,
 .character-checkbox {
+  /* margin-right: 0.5rem;
+  margin: 0.5rem; */
+  /* margin-left: 0.2rem; */
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
   margin-right: 0.5rem;
-  margin: 0.5rem;
-  margin-left: 0.2rem;
 }
 
 .character-checkbox {
@@ -155,7 +176,7 @@ main {
 .submit-button {
   height: 6vh;
   /* width: 6vh; */
-  width: 97%;
+  width: 95%;
   margin: 0.5rem;
   /* margin-right: 1rem; */
   margin-left: 0.2rem;
@@ -170,7 +191,7 @@ h1 {
   margin-left: 1.2vw;
 }
 
-.container {
+.character-boxes {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -342,7 +363,7 @@ input {
     margin-left: 1vh;
   }
 
-  .container {
+  .character-boxes {
     height: 60vh;
   }
   
@@ -398,4 +419,3 @@ input {
 /* @media screen and (min-width: 1024px) {
   //TBD
 } */
-

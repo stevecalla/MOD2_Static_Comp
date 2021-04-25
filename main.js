@@ -1,58 +1,67 @@
 // variables for querySelectors below
-const cards = document.querySelector('#box'); //adjust id name
+const characterCards = document.querySelector('#characterBox'); //adjust id name
 const populateCheckboxList = document.querySelector('#populateCheckbox');
 const selectCharacters = document.querySelector('#selectCharacters');
 const renderCheckBoxMenu = document.querySelector('#checkboxMenu');
 const getCheckBoxInput = document.querySelector('form');
 const getSearchBoxInput = document.querySelector('#searchInput');
 const randomCheckbox = document.querySelector('#randomCheckbox');
+const clearIcon = document.querySelector('#clearIcon');
+// const randomNumberText = document.querySelector('#randomNumberText');
 
 // global variables below
+let renderCharacterList = []; //refactor
 
 // event listeners below
 window.addEventListener('load', getRandomCharactersOnWindowLoad);
-selectCharacters.addEventListener('click', toggleCharacterMenu);
+getCheckBoxInput.addEventListener('submit', getCharactersOnSubmit);
 getSearchBoxInput.addEventListener('input', searchCharacters);
-getCheckBoxInput.addEventListener('submit', getRandomCharactersOnSubmit);
-getCheckBoxInput.addEventListener('submit', submitCheckedCharacter);
+selectCharacters.addEventListener('click', toggleCharacterMenu);
+clearIcon.addEventListener('click', hideClearIcon);
 
 function getRandomCharactersOnWindowLoad() {
   getRandomCharacters();
 }
 
-function getRandomCharactersOnSubmit() {
-  if (randomCheckbox.checked) {
-    getRandomCharacters();
-  }  
+function getCharactersOnSubmit(event) {
+  event.preventDefault();
+  randomCheckbox.checked ? getRandomCharacters() : getCheckedCharacter();
 }
 
 function getRandomCharacters() {
   const randomNumbers = [];
   const randomCharacters = [];
+  // console.log('a=', randomCharacters);
   createRandomNumbers(randomNumbers);
   convertRandomNumbersToCharacters(randomNumbers, randomCharacters);
   getEachCharacterFromMarvelAPI(randomCharacters); 
   getSearchBoxInput.value = "";
   createCharacterCheckboxList(characters);
+  renderCharacterList = [];
 }
 
 function createRandomNumbers(randomNumbers) {
-  for (let i = 0; i < 8; i++) {
-    let randomNumber = Math.floor(Math.floor(Math.random() * characters.length));
-    randomNumbers.push(randomNumber);
+  // const randomCount = window.prompt();
+  const randomCount = 8;
+  for (let i = 0; i < randomCount; i++) {
+    randomNumbers.push(Math.floor(Math.floor(Math.random() * characters.length)));
   }
+  // console.log(randomNumberText);
+  // randomNumberText.innerText = `Get ${randomCount} Random Characters`;
+}
+
+function inputNumberOfCharacters() {
+  //create
 }
 
 function convertRandomNumbersToCharacters(randomNumbers, randomCharacters) {
-  for (let i = 0; i < randomNumbers.length; i++) { 
-    randomCharacters.push(characters[randomNumbers[i]]);
-  };
+  randomNumbers.forEach(number => randomCharacters.push(characters[number]));
 }
 
 function createCharacterCheckboxList(currentCharacters) {
-  let currentCharacterList = '';
+  let currentCharacterDropDownList = '';
   for (let i = 0; i < currentCharacters.length; i++) {
-    currentCharacterList += 
+    currentCharacterDropDownList += 
       `
       <label>
         <input type='checkbox' id='checkBox' value='${currentCharacters[i]}'>
@@ -61,20 +70,16 @@ function createCharacterCheckboxList(currentCharacters) {
       <br>
       `;
     }
-  renderDropdownList(currentCharacterList);
+  renderDropdownList(currentCharacterDropDownList);
 }
 
-function renderDropdownList(currentCharacterList) {
-  populateCheckboxList.innerHTML = currentCharacterList;
+function renderDropdownList(currentCharacterDropDownList) {
+  populateCheckboxList.innerHTML = currentCharacterDropDownList;
 }
 
-let testArray = []; //refactor
-
-function submitCheckedCharacter(event) {
-  event.preventDefault();
+function getCheckedCharacter() {
   const checkedCharacters = document.querySelectorAll('#checkBox');
-  // randomCheckbox.checked = false;
-  testArray = [];
+  renderCharacterList = [];
   for (let i = 0; i < checkedCharacters.length; i++) {
     if (checkedCharacters[i].checked && !randomCheckbox.checked) {
       let abc = getCharacterDataFromMarvelAPI(checkedCharacters[i].value); // this is the character characterList
@@ -96,11 +101,12 @@ function getCharacterDataFromMarvelAPI(characterName) { //what is this doing? ==
 }
 
 function createCharacterListDetails(response) { //what is this doing? === creating the array of character objects
-  response.data.results.forEach(character => testArray.push(character));
-  createCharacterCards(testArray);
+  response.data.results.forEach(character => renderCharacterList.push(character));
+  createCharacterCards(renderCharacterList);
 };
 
-function createCharacterCards(data) { //what is this doing? === creating the character cards to render in the DOM
+function createCharacterCards(data) { //what is this doing? === creating the character characterCards to render in the DOM
+  // console.log('c=', data);
   let characterCards = '';
   for (let i = 0; i < data.length; i++) {
     characterCards += 
@@ -123,21 +129,34 @@ function createCharacterCards(data) { //what is this doing? === creating the cha
   renderCharacterCards(characterCards);
 }
 
-function renderCharacterCards(renderCards) { //what is this doing? === rendering the character cards
-  cards.innerHTML = renderCards;
+function renderCharacterCards(renderCharacterCards) {
+  characterCards.innerHTML = renderCharacterCards;
 }
 
 function searchCharacters() {
-  const test10 = [];
-  for (let i = 0; i < characters.length; i++) {
-    if (characters[i].toUpperCase().includes(getSearchBoxInput.value.toUpperCase())) {
-      test10.push(characters[i])
-    }
-  }
-  createCharacterCheckboxList(test10);
+  const searchCharactersDropDownList = [];
+  characters.forEach(character => {
+    if (character.toUpperCase().includes(getSearchBoxInput.value.toUpperCase())) {
+      searchCharactersDropDownList.push(character)  
+    };
+  })
+  createCharacterCheckboxList(searchCharactersDropDownList);
+  randomCheckbox.checked ? randomCheckbox.checked = false : randomCheckbox.checked;
+  getSearchBoxInput.value === '' ? hideClearIcon() : showClearIcon();
+}
+
+function showClearIcon() {
+  clearIcon.classList.add('show');
+  clearIcon.classList.remove('hidden');
+}
+
+function hideClearIcon() {
+  getSearchBoxInput.value = '';
+  clearIcon.classList.remove('show');
+  clearIcon.classList.add('hidden');
 }
   
-function toggleCharacterMenu() { //refactor
+function toggleCharacterMenu() {
   renderCheckBoxMenu.classList.toggle('show');
   randomCheckbox.checked = false;
   createCharacterCheckboxList(characters);
