@@ -95,14 +95,10 @@ main {
   border-radius: 10px;
 }
 
-.select-characters:hover {
-  /* background-color: black; */
-  /* border: 2px solid white; */
-  /* border: 0.1rem solid black; */
+/* .select-characters:hover {
   box-sizing: border-box;
   cursor: pointer;  
-  /* cursor: pointer; */
-} 
+}  */
 
 .checkbox-menu {
   display: none;
@@ -125,10 +121,6 @@ main {
 .search-bar {
   display: flex;
   margin: 0.5rem;
-  /* margin-left: 0.2rem; */
-  /* margin-top: 0.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem; */
 }
 
 /* .cloak {
@@ -165,11 +157,12 @@ main {
   overflow: hidden;
 }
 
+/* .search-input:hover {
+  cursor: pointer;
+} */
+
 .random-checkbox,
 .character-checkbox {
-  /* margin-right: 0.5rem;
-  margin: 0.5rem; */
-  /* margin-left: 0.2rem; */
   margin-bottom: 0.5rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -180,12 +173,17 @@ main {
   overflow: auto;
 }
 
+label:hover,
+input:hover,
+button:hover {
+  border: 0.2 solid red;
+  cursor: pointer;  
+} 
+
 .submit-button {
   height: 6vh;
-  /* width: 6vh; */
   width: 95%;
   margin: 0.5rem;
-  /* margin-right: 1rem; */
   margin-left: 0.2rem;
 }
 
