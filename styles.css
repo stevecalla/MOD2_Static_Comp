@@ -134,9 +134,14 @@ main {
 }
 
 .search-icon,
-.clear-icon{
+.clear-icon {
   height: 6vh;
   width: 6vh;
+}
+
+.clear-icon:hover {
+  border: 0.1rem solid black;
+  box-sizing: border-box;
 }
 
 .search-input {
@@ -144,21 +149,13 @@ main {
   border: none;
   height: 6vh;
   /* width: 100%; */
+  width: 15.2rem;
   margin: 0;
   padding: 0;
-  /* padding-left: 3rem; */
   font-size: 1.25rem;
   border-radius: 0;
-  /* text-indent: 3rem; */
-  /* background: url(./assets/magnify-1.1s-200px.png) left no-repeat show,
-  url(./assets/add-1.1s-200px.png) right no-repeat hidden;
-  background-size: contain;
-  background-color: white; */
   width: 14.7rem;
   overflow: hidden;
-  /* padding-right: 3rem; */
-  /* width: 11.7rem; */
-  width: 15.2rem;
 }
 
 .random-checkbox,

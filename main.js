@@ -6,7 +6,7 @@ const renderCheckBoxMenu = document.querySelector('#checkboxMenu');
 const getCheckBoxInput = document.querySelector('form');
 const getSearchBoxInput = document.querySelector('#searchInput');
 const randomCheckbox = document.querySelector('#randomCheckbox');
-const renderClearIcon = document.querySelector('#clearIcon');
+const clearIcon = document.querySelector('#clearIcon');
 // const randomNumberText = document.querySelector('#randomNumberText');
 
 // global variables below
@@ -17,7 +17,7 @@ window.addEventListener('load', getRandomCharactersOnWindowLoad);
 getCheckBoxInput.addEventListener('submit', getCharactersOnSubmit);
 getSearchBoxInput.addEventListener('input', searchCharacters);
 selectCharacters.addEventListener('click', toggleCharacterMenu);
-renderClearIcon.addEventListener('click', TBD);
+clearIcon.addEventListener('click', hideClearIcon);
 
 function getRandomCharactersOnWindowLoad() {
   getRandomCharacters();
@@ -142,16 +142,18 @@ function searchCharacters() {
   })
   createCharacterCheckboxList(searchCharactersDropDownList);
   randomCheckbox.checked ? randomCheckbox.checked = false : randomCheckbox.checked;
-  if (getSearchBoxInput.value) {
-    renderClearIcon.classList.add('show');
-    renderClearIcon.classList.remove('hidden');
-  }
+  getSearchBoxInput.value === '' ? hideClearIcon() : showClearIcon();
 }
 
-function TBD() {
+function showClearIcon() {
+  clearIcon.classList.add('show');
+  clearIcon.classList.remove('hidden');
+}
+
+function hideClearIcon() {
   getSearchBoxInput.value = '';
-  renderClearIcon.classList.remove('show');
-  renderClearIcon.classList.add('hidden');
+  clearIcon.classList.remove('show');
+  clearIcon.classList.add('hidden');
 }
   
 function toggleCharacterMenu() {
