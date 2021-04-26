@@ -138,8 +138,8 @@ function createCharacterCards(data) { //what is this doing? === creating the cha
         </div>
         <h2 class='name-text'>${data[i].name}</h2>
         <p class='description-text'>${data[i].description}</p>
-        <a class='text url-box' href='${data[i].urls[0].url}' target='_blank'>Link to profile</a>
-        <a class='text url-box' href='${data[i].urls[1].url}' target='_blank'>Link to comics</a>
+        <a class='text url-box' href='${data[i].urls[0].url}' target='_blank'>Profile</a>
+        <a class='text url-box' href='${data[i].urls[1].url}' target='_blank'>Comics</a>
         <p class='count-text'>Comic Count: ${data[i].comics.available}</p>
         <p class='count-text'>Stories Count: ${data[i].stories.available}</p>
       </article>  
