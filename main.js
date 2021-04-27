@@ -23,28 +23,27 @@ clearIcon.addEventListener('click', hideClearIcon);
 function getRandomCharactersOnWindowLoad() {
   getRandomCharacters();
   setTimeout( function() {
-    animationContainter.classList.toggle('show');
-    animationContainter2.classList.toggle('show');
+    loadIconContainter.classList.toggle('show');
+    loadIcon.classList.toggle('show');
   }, 1000);
-  animationContainter.classList.toggle('show');
-  animationContainter2.classList.toggle('show');
-  // characterCards.classList.toggle('hidden');
+  loadIconContainter.classList.toggle('show');
+  loadIcon.classList.toggle('show');
 }
 
-var animationContainter = document.querySelector('.animation-containter');
-var animationContainter2 = document.querySelector('.get-message-animation');
+const loadIconContainter = document.querySelector('#loadIconContainter');
+const loadIcon = document.querySelector('#loadIcon');
 
 function getCharactersOnSubmit(event) {
   event.preventDefault();
   randomCheckbox.checked ? getRandomCharacters() : getCheckedCharacter();
   toggleCharacterMenu();
+  characterCards.innerHTML = '';
   setTimeout( function() {
-    animationContainter.classList.toggle('show');
-    animationContainter2.classList.toggle('show');
+    loadIconContainter.classList.toggle('show');
+    loadIcon.classList.toggle('show');
   }, 1000);
-  animationContainter.classList.toggle('show');
-  animationContainter2.classList.toggle('show');
-  characterCards.classList.toggle('hidden');
+  loadIconContainter.classList.toggle('show');
+  loadIcon.classList.toggle('show');
 }
 
 function getRandomCharacters() {
