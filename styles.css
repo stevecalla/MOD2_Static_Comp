@@ -342,8 +342,10 @@ input {
 }
 
 .url-box:hover {
-  background-color:yellow;
-  color: black;
+  /* border: 0.01rem solid black;
+  box-sizing: border-box;
+  /* background-color:yellow; */
+  /* color: black; */ */
   cursor: pointer;
 }
 
