@@ -10,6 +10,7 @@ const randomCheckbox = document.querySelector('#randomCheckbox');
 const clearIcon = document.querySelector('#clearIcon');
 const loadIconContainter = document.querySelector('#loadIconContainter');
 const loadIcon = document.querySelector('#loadIcon');
+const randomCheckboxWrapper = document.querySelector('#randomCheckboxWrapper');
 // const randomNumberText = document.querySelector('#randomNumberText');
 
 // global variables below
@@ -17,8 +18,8 @@ let renderCharacterList = []; //refactor
 
 // event listeners below
 window.addEventListener('load', getRandomCharactersOnWindowLoad);
-getCheckBoxInput.addEventListener('submit', getCharactersOnSubmit);
 getSearchBoxInput.addEventListener('input', searchCharacters);
+getCheckBoxInput.addEventListener('submit', getCharactersOnSubmit);
 selectCharacters.addEventListener('click', toggleCharacterMenu);
 clearIcon.addEventListener('click', hideClearIcon);
 
@@ -147,49 +148,45 @@ function searchCharacters() {
     if (character.toUpperCase().includes(getSearchBoxInput.value.toUpperCase())) {
       searchCharactersDropDownList.push(character)  
     };
-  })
+  });
   createCharacterCheckboxList(searchCharactersDropDownList);
   randomCheckbox.checked ? randomCheckbox.checked = false : randomCheckbox.checked;
-  getSearchBoxInput.value === '' ? hideClearIcon() : showClearIcon();
+  getSearchBoxInput.value === '' ? hideClearIcon() : show(clearIcon);
+  getSearchBoxInput.value === '' ? show(randomCheckboxWrapper) : hide(randomCheckboxWrapper);
 }
 
 function loadIconAnimation() {
   characterCards.innerHTML = '';
   setTimeout( function() {
-    loadIconContainter.classList.toggle('show');
-    loadIcon.classList.toggle('show');
+    showToggle(loadIconContainter);
+    showToggle(loadIcon);
   }, 1000);
-  loadIconContainter.classList.toggle('show');
-  loadIcon.classList.toggle('show');
-}
-
-function showClearIcon() {
-  clearIcon.classList.add('show');
-  clearIcon.classList.remove('hidden');
+  showToggle(loadIconContainter);
+  showToggle(loadIcon);
 }
 
 function hideClearIcon() {
   getSearchBoxInput.value = '';
-  clearIcon.classList.remove('show');
-  clearIcon.classList.add('hidden');
+  hide(clearIcon);
+  show(randomCheckboxWrapper);
 }
   
 function toggleCharacterMenu() {
-  renderCheckBoxMenu.classList.toggle('show');
-  renderCheckBoxArrow.classList.toggle('show');
+  showToggle(renderCheckBoxMenu);
+  showToggle(renderCheckBoxArrow);
   randomCheckbox.checked = false;
   createCharacterCheckboxList(characters);
   getSearchBoxInput.value = '';
 }
 
-// function show(element) {
-//   element.classList.remove('hidden');
-// }
+function showToggle(element) {
+  element.classList.toggle('show');
+}
 
-// function hide(element) {
-//   element.classList.add('hidden');
-// }
+function show(element) {
+  element.classList.remove('hidden');
+}
 
-// function revealResetMessage() {
-//   show(resetMessage);
-// }
+function hide(element) {
+  element.classList.add('hidden');
+}
