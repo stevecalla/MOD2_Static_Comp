@@ -8,6 +8,8 @@ const getCheckBoxInput = document.querySelector('form');
 const getSearchBoxInput = document.querySelector('#searchInput');
 const randomCheckbox = document.querySelector('#randomCheckbox');
 const clearIcon = document.querySelector('#clearIcon');
+const loadIconContainter = document.querySelector('#loadIconContainter');
+const loadIcon = document.querySelector('#loadIcon');
 // const randomNumberText = document.querySelector('#randomNumberText');
 
 // global variables below
@@ -22,28 +24,14 @@ clearIcon.addEventListener('click', hideClearIcon);
 
 function getRandomCharactersOnWindowLoad() {
   getRandomCharacters();
-  setTimeout( function() {
-    loadIconContainter.classList.toggle('show');
-    loadIcon.classList.toggle('show');
-  }, 1000);
-  loadIconContainter.classList.toggle('show');
-  loadIcon.classList.toggle('show');
+  loadIconAnimation();
 }
-
-const loadIconContainter = document.querySelector('#loadIconContainter');
-const loadIcon = document.querySelector('#loadIcon');
 
 function getCharactersOnSubmit(event) {
   event.preventDefault();
   randomCheckbox.checked ? getRandomCharacters() : getCheckedCharacter();
   toggleCharacterMenu();
-  characterCards.innerHTML = '';
-  setTimeout( function() {
-    loadIconContainter.classList.toggle('show');
-    loadIcon.classList.toggle('show');
-  }, 1000);
-  loadIconContainter.classList.toggle('show');
-  loadIcon.classList.toggle('show');
+  loadIconAnimation();
 }
 
 function getRandomCharacters() {
@@ -163,6 +151,16 @@ function searchCharacters() {
   createCharacterCheckboxList(searchCharactersDropDownList);
   randomCheckbox.checked ? randomCheckbox.checked = false : randomCheckbox.checked;
   getSearchBoxInput.value === '' ? hideClearIcon() : showClearIcon();
+}
+
+function loadIconAnimation() {
+  characterCards.innerHTML = '';
+  setTimeout( function() {
+    loadIconContainter.classList.toggle('show');
+    loadIcon.classList.toggle('show');
+  }, 1000);
+  loadIconContainter.classList.toggle('show');
+  loadIcon.classList.toggle('show');
 }
 
 function showClearIcon() {
