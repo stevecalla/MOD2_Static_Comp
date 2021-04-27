@@ -210,14 +210,14 @@ h1 {
   margin-left: 1.2vw;
 }
 
-.animation-containter {
+.load-icon-containter {
   display: flex;
   justify-content: center;
 }
 
-.get-message-animation {
-  height: 20vh;
-  width: 20vh;
+.load-icon {
+  height: 30vh;
+  width: 30vh;
 }
 
 .character-boxes {
@@ -342,8 +342,10 @@ input {
 }
 
 .url-box:hover {
-  background-color:yellow;
-  color: black;
+  /* border: 0.01rem solid black;
+  box-sizing: border-box;
+  /* background-color:yellow; */
+  /* color: black; */ */
   cursor: pointer;
 }
 

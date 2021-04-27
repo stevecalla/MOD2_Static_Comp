@@ -51,11 +51,13 @@
           <!-- <img class='clear-icon' id='clearIcon' src='./assets/microphone-1.1s-200pxv1.png' alt='Clear icon for search box'> -->
           <img class='clear-icon hidden' id='clearIcon' src='./assets/add-1.1s-200px.png' alt='Clear icon for search box'>
         </div>
-        <fieldset class='random-checkbox'>
+        <fieldset class='random-checkbox' id='randomCheckboxWrapper'>
+          <legend></legend>
           <input type='checkbox' id='randomCheckbox' value='Get 8 Random Characters'>
           <label for='randomCheckbox' id='randomNumberText'>Get 8 Random Characters</label>
         </fieldset>
         <fieldset class='character-checkbox'>
+          <legend></legend>
           <div id='populateCheckbox'></div>
         </fieldset>
         <div>
@@ -63,8 +65,8 @@
         </div>
       </form>
     </div>
-    <div class='animation-containter hidden'>
-      <img class='get-message-animation hidden' src='./assets/Ripple-3s-124px-final-affirmation.svg' alt='loading characters'>
+    <div class='load-icon-containter hidden' id='loadIconContainter'>
+      <img class='load-icon hidden' id='loadIcon'src='./assets/Spin-2s-200px.svg' alt='loading characters animation'>
     </div>
     <section class='character-boxes' id='characterBox'></section>
   </main>

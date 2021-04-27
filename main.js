@@ -8,6 +8,9 @@ const getCheckBoxInput = document.querySelector('form');
 const getSearchBoxInput = document.querySelector('#searchInput');
 const randomCheckbox = document.querySelector('#randomCheckbox');
 const clearIcon = document.querySelector('#clearIcon');
+const loadIconContainter = document.querySelector('#loadIconContainter');
+const loadIcon = document.querySelector('#loadIcon');
+const randomCheckboxWrapper = document.querySelector('#randomCheckboxWrapper');
 // const randomNumberText = document.querySelector('#randomNumberText');
 
 // global variables below
@@ -15,36 +18,21 @@ let renderCharacterList = []; //refactor
 
 // event listeners below
 window.addEventListener('load', getRandomCharactersOnWindowLoad);
-getCheckBoxInput.addEventListener('submit', getCharactersOnSubmit);
 getSearchBoxInput.addEventListener('input', searchCharacters);
+getCheckBoxInput.addEventListener('submit', getCharactersOnSubmit);
 selectCharacters.addEventListener('click', toggleCharacterMenu);
 clearIcon.addEventListener('click', hideClearIcon);
 
 function getRandomCharactersOnWindowLoad() {
   getRandomCharacters();
-  setTimeout( function() {
-    animationContainter.classList.toggle('show');
-    animationContainter2.classList.toggle('show');
-  }, 1000);
-  animationContainter.classList.toggle('show');
-  animationContainter2.classList.toggle('show');
-  // characterCards.classList.toggle('hidden');
+  loadIconAnimation();
 }
-
-var animationContainter = document.querySelector('.animation-containter');
-var animationContainter2 = document.querySelector('.get-message-animation');
 
 function getCharactersOnSubmit(event) {
   event.preventDefault();
   randomCheckbox.checked ? getRandomCharacters() : getCheckedCharacter();
   toggleCharacterMenu();
-  setTimeout( function() {
-    animationContainter.classList.toggle('show');
-    animationContainter2.classList.toggle('show');
-  }, 1000);
-  animationContainter.classList.toggle('show');
-  animationContainter2.classList.toggle('show');
-  characterCards.classList.toggle('hidden');
+  loadIconAnimation();
 }
 
 function getRandomCharacters() {
@@ -160,39 +148,45 @@ function searchCharacters() {
     if (character.toUpperCase().includes(getSearchBoxInput.value.toUpperCase())) {
       searchCharactersDropDownList.push(character)  
     };
-  })
+  });
   createCharacterCheckboxList(searchCharactersDropDownList);
   randomCheckbox.checked ? randomCheckbox.checked = false : randomCheckbox.checked;
-  getSearchBoxInput.value === '' ? hideClearIcon() : showClearIcon();
+  getSearchBoxInput.value === '' ? hideClearIcon() : show(clearIcon);
+  getSearchBoxInput.value === '' ? show(randomCheckboxWrapper) : hide(randomCheckboxWrapper);
 }
 
-function showClearIcon() {
-  clearIcon.classList.add('show');
-  clearIcon.classList.remove('hidden');
+function loadIconAnimation() {
+  characterCards.innerHTML = '';
+  setTimeout( function() {
+    showToggle(loadIconContainter);
+    showToggle(loadIcon);
+  }, 1000);
+  showToggle(loadIconContainter);
+  showToggle(loadIcon);
 }
 
 function hideClearIcon() {
   getSearchBoxInput.value = '';
-  clearIcon.classList.remove('show');
-  clearIcon.classList.add('hidden');
+  hide(clearIcon);
+  show(randomCheckboxWrapper);
 }
   
 function toggleCharacterMenu() {
-  renderCheckBoxMenu.classList.toggle('show');
-  renderCheckBoxArrow.classList.toggle('show');
+  showToggle(renderCheckBoxMenu);
+  showToggle(renderCheckBoxArrow);
   randomCheckbox.checked = false;
   createCharacterCheckboxList(characters);
   getSearchBoxInput.value = '';
 }
 
-// function show(element) {
-//   element.classList.remove('hidden');
-// }
+function showToggle(element) {
+  element.classList.toggle('show');
+}
 
-// function hide(element) {
-//   element.classList.add('hidden');
-// }
+function show(element) {
+  element.classList.remove('hidden');
+}
 
-// function revealResetMessage() {
-//   show(resetMessage);
-// }
+function hide(element) {
+  element.classList.add('hidden');
+}
