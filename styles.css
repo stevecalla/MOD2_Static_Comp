@@ -22,8 +22,9 @@ body,
   justify-content: center;
   align-items: center;
   height: 10vh;
-  margin-bottom: 2vh;
-  padding: 1vh;
+  /* margin-left: 1.2vw; */
+  /* margin-bottom: 2vh; */
+  /* padding: 1vh; */
   font-size: 1.2rem;
   color: #689cc5;
 }
@@ -94,9 +95,12 @@ main {
   padding: 2px;
   padding-left: .75rem;
   padding-right: .75rem;
+  /* background-color: black; */
+  background-color: #689cc5;
+  /* color: white; */
+  color: black;
   font-size: 20px;
-  background-color: black;
-  color: white;
+  font-weight: bold;
   border-radius: 10px;
 }
 
@@ -111,8 +115,10 @@ main {
   justify-content: space-between;
   height: 350px;
   width: 300px;
-  background-color: black;
+  /* background-color: black; */
+  background-color: #689cc5;
   color: white;
+  color: black;
   font-size: 16px;
   font-weight: bold;
   position: absolute;
@@ -128,13 +134,14 @@ main {
   width: 0; 
   height: 0; 
   border-left: 12px solid transparent;
+  margin-top: .5rem;
   border-right: 12px solid transparent;
-  border-bottom: 12px solid black;
+  border-bottom: 12px solid #689cc5;
   position: absolute;
   z-index: 4;
   right: 40px;
   top: 9.5vh;
-  margin-top: .5rem;
+  /* background-color: #689cc5; */
 }
 
 .search-bar {
@@ -203,6 +210,7 @@ button:hover {
   width: 95%;
   margin: 0.5rem;
   font-size: 20px;
+  font-weight: bold;
   /* margin-left: 0.2rem; */
 }
 
@@ -211,10 +219,10 @@ button:hover {
   display: flex;
 }
 
-.admin {
+/* .admin {
   margin-left: 1.2vw;
   color: white;
-}
+} */
 
 .load-icon-containter {
   display: flex;
@@ -299,6 +307,7 @@ input {
 .arrow-image {
   height: 10vh;
   width: 10vh;
+  background-color: #689cc5;
 }
 
 .text-overlay-3 {
