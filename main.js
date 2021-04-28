@@ -33,6 +33,9 @@ function getCharactersOnSubmit(event) {
   randomCheckbox.checked ? getRandomCharacters() : getCheckedCharacter();
   toggleCharacterMenu();
   loadIconAnimation();
+
+  show(randomCheckboxWrapper);
+  createCharacterCheckboxList(characters);
 }
 
 function getRandomCharacters() {
@@ -169,6 +172,7 @@ function hideClearIcon() {
   getSearchBoxInput.value = '';
   hide(clearIcon);
   show(randomCheckboxWrapper);
+  createCharacterCheckboxList(characters);
 }
   
 function toggleCharacterMenu() {
