@@ -12,15 +12,16 @@
 <body>
   <header class='header'>
     <section class='admin'>
+      <h1 class='hidden'>Website of Marvel Characters</h1>
       <img class='logo-image' src='./assets/Cartoon-designstyle-cartoon-m.png' alt='Cartoon logo'>
-      <div class='admin-box'>
+      <!-- <div class='admin-box'> -->
         <!-- <img class='admin-image' src='./assets/people-1.1s-200px.png' alt='Login logo'> -->
         <!-- <div class='admin-text'>Admin Username</div>
         <img class='admin-image2' src='./assets/down-1.1s-200px.png' alt='Dropdown menu arrow'> -->
-      </div>
+      <!-- </div> -->
     </section>
     <nav>
-      <img class='nav-icon nav-icon2' src='./assets/todo list-1.1s-200px.png' alt='Icon for list of characters'>
+      <img class='nav-icon nav-icon2' src='./assets/todolist-1.1s-200px.png' alt='Icon for list of characters'>
       <a class='nav-links' href="https://www.marvel.com/characters" target="_blank">CHARACTERS</a>
       <img class='nav-icon nav-icon2' src='./assets/library-1.1s-200px.png' alt='Icon for comics'>
       <a class='nav-links' href="https://www.marvel.com/comics?&options%5Boffset%5D=0&totalcount=12" target="_blank">COMICS</a>
@@ -36,7 +37,7 @@
   <main class='main-wrapper'>
     <div class='character-nav'>
       <h1>Marvel Characters</h1>
-      <button class='select-characters' id='selectCharacters'><p>Character Menu</p></button>
+      <button class='select-characters' id='selectCharacters'>Character Menu</button>
       <div class="arrow-up hidden" id='checkboxArrow'></div>
       <form class='checkbox-menu hidden' id='checkboxMenu'>
         <!-- <div class="wrapper">
@@ -66,7 +67,7 @@
       </form>
     </div>
     <div class='load-icon-containter hidden' id='loadIconContainter'>
-      <img class='load-icon hidden' id='loadIcon'src='./assets/Spin-2s-200px.svg' alt='loading characters animation'>
+      <img class='load-icon hidden' id='loadIcon' src='./assets/Spin-2s-200px.svg' alt='loading characters animation'>
     </div>
     <section class='character-boxes' id='characterBox'></section>
   </main>

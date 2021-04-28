@@ -443,9 +443,9 @@ input {
     margin-bottom: 0.5rem;
   }
 
-  p {
+  /* p {
     margin: 0;
-  }
+  } */
 
   .checkbox-menu {
     top: 13vh;
