@@ -127,7 +127,7 @@ function createCharacterCards(data) { //what is this doing? === creating the cha
           <img class='container-image' src ='${data[i].thumbnail.path}.${data[i].thumbnail.extension}'
             alt='${data[i].name}'>
         </div>
-        <h2 class='name-text'>${data[i].name}</h2>
+        <h1 class='name-text' role='heading'>${data[i].name}</h1>
         <p class='description-text'>${data[i].description}</p>
         <a class='text url-box' href='${data[i].urls[0].url}' target='_blank'>Profile</a>
         <a class='text url-box' href='${data[i].urls[1].url}' target='_blank'>Comics</a>
