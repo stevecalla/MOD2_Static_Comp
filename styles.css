@@ -382,6 +382,11 @@ input {
     text-align: center;
   }
 
+  .page-header {
+    margin-top: 1rem;
+    /* margin-bottom: 3rem; */
+  }
+
 }
 
 /* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
@@ -438,6 +443,7 @@ input {
     border: 0.1 solid white;
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
   }
   
   .nav-icon {
