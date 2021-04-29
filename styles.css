@@ -378,13 +378,16 @@ input {
 /* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
 @media screen and (max-width: 1025px) {
 
+  body {
+    overflow: hidden;
+  }
+  
   h1 {
     text-align: center;
   }
 
   .page-header {
-    margin-top: 1rem;
-    /* margin-bottom: 3rem; */
+    margin-top: 2.5rem;
   }
 
 }
@@ -423,7 +426,7 @@ input {
     color: #689cc5;
   }
   
-  .admin-image {
+  /* .admin-image {
     height: 5vh;
     width: 5vh;
     margin-right: 1vh;
@@ -433,7 +436,7 @@ input {
     height: 3vh;
     width: 3vh;
     margin-left: 1vh;
-  }
+  } */
 
   .character-boxes {
     height: 60vh;
@@ -443,7 +446,7 @@ input {
     border: 0.1 solid white;
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   
   .nav-icon {
@@ -461,6 +464,7 @@ input {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin: 0;
     /* margin-left: 1.2vw; */
   }
 
