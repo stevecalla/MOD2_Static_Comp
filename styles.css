@@ -4,7 +4,7 @@ body,
   height: 100%;
   width: 100%;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   overflow: hidden;  
 }
 
@@ -266,7 +266,10 @@ button:hover {
   background-color: lightsteelblue;
   background-color: royalblue;
   background-color: black;
+  background-color: #689cc5;
   color: white;
+  color: black;
+  /* font-weight: bolder; */
 }
 
 input {
@@ -339,7 +342,7 @@ input {
 
 .name-text {
   font-size: 1.5rem;
-  font-weight: bolder;
+  font-weight: 900;
 }
 
 .description-text {
