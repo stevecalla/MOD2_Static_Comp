@@ -181,6 +181,16 @@ function toggleCharacterMenu() {
   randomCheckbox.checked = false;
   createCharacterCheckboxList(characters);
   getSearchBoxInput.value = '';
+  buttonExpandedAccessibilityToggle();    
+}
+    
+function buttonExpandedAccessibilityToggle() {
+  // console.log(selectCharacters.getAttribute('aria-expanded'));
+  if (selectCharacters.getAttribute('aria-expanded') === 'false') {
+    selectCharacters.setAttribute('aria-expanded', 'true');
+  } else {
+    selectCharacters.setAttribute('aria-expanded', 'false');
+  }
 }
 
 function showToggle(element) {
