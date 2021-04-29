@@ -504,15 +504,14 @@ input {
   } */
 
   .checkbox-menu {
-    top: 13vh;
+    top: 14vh;
     margin-right: 2.75rem;
   }
 
   .arrow-up {
-    top: 11vh;
+    top: 12.3vh;
     margin-right: 1.75rem;
-
-    top: 11.2vh;
+    /* top: 11.2vh; */
     margin-right: 8.5rem;
   }
 
