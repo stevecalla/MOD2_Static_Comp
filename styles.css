@@ -89,7 +89,7 @@ main {
 .select-characters {
   border: none;
   height: 4rem;
-  width: 11rem;
+  width: 15rem;
   margin-left: auto;
   margin: 0.5rem .75rem 0.5rem auto;
   padding: 2px;
@@ -99,9 +99,13 @@ main {
   background-color: #689cc5;
   /* color: white; */
   color: black;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   border-radius: 10px;
+}
+
+span {
+  font-size: 14px;
 }
 
 /* .select-characters:hover {
