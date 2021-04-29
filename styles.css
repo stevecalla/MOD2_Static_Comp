@@ -474,6 +474,10 @@ input {
     justify-content: center;
     margin-top: 2rem;
   }
+
+  .todo-icon {
+    margin-left: 0;
+  }
   
   /* .nav-icon {
     margin-left: .25vh;
