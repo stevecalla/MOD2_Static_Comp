@@ -474,6 +474,10 @@ input {
     justify-content: center;
     margin-top: 2rem;
   }
+
+  .todo-icon {
+    margin-left: 0;
+  }
   
   /* .nav-icon {
     margin-left: .25vh;
@@ -507,7 +511,7 @@ input {
   .checkbox-menu {
     top: 15vh;
     margin-right: 2.75rem;
-    white-space: nowrap;
+    /* white-space: nowrap; */
   }
 
   .arrow-up {
