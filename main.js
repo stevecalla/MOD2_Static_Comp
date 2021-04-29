@@ -121,7 +121,7 @@ function createCharacterCards(data) { //what is this doing? === creating the cha
   for (let i = 0; i < data.length; i++) {
     characterCards += 
       `
-      <article class='character-box' id='box'>          
+      <article class='character-box'>          
         <div class='tint-overlay'></div>
         <div class='image-box'>
           <img class='container-image' src ='${data[i].thumbnail.path}.${data[i].thumbnail.extension}'
@@ -129,10 +129,10 @@ function createCharacterCards(data) { //what is this doing? === creating the cha
         </div>
         <h1 class='name-text' role='heading'>${data[i].name}</h1>
         <p class='description-text'>${data[i].description}</p>
-        <a class='text url-box' href='${data[i].urls[0].url}' target='_blank'>Profile</a>
-        <a class='text url-box' href='${data[i].urls[1].url}' target='_blank'>Comics</a>
-        <p class='count-text'>Comic Count: ${data[i].comics.available}</p>
-        <p class='count-text'>Stories Count: ${data[i].stories.available}</p>
+        <a class='text url-box' href='${data[i].urls[0].url}' target='_blank' aria-label='Marvel profile for ${data[i].name}'>Profile</a>
+        <a class='text url-box' href='${data[i].urls[1].url}' target='_blank' aria-label='Marvel comics for ${data[i].name}'>Comics</a>
+        <p class='count-text' aria-label='Marvel comic count for ${data[i].name}'>Comic Count: ${data[i].comics.available}</p>
+        <p class='count-text' aria-label='Marvel story count for ${data[i].name}'>Stories Count: ${data[i].stories.available}</p>
       </article>  
       `;
   }
