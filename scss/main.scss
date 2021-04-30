@@ -1,0 +1,14 @@
+@import './reset';
+@import './normalize';
+@import './variables';
+
+body {
+  background: $text-blueish;
+  color: $text-white;
+  font-family: map-get($font-styles, script);
+
+  .main:hover {
+    background: $hover-color;
+  }
+
+}

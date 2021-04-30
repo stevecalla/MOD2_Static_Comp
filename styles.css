@@ -4,7 +4,9 @@ body,
   height: 100%;
   width: 100%;
   margin: 0;
-  /* font-family: 'Roboto', sans-serif; */
+  font-family: sans-serif, 'Roboto';
+  /* font-family: 'Freckle Face', cursive; */
+  /* font-family: 'Luckiest Guy', cursive; */
   overflow: hidden;  
 }
 
@@ -277,7 +279,7 @@ input {
   margin-left: .75rem;
 }
 
-.text-overlay-1 {
+/* .text-overlay-1 {
   margin: 2vh;
   color: black;
   font-size: 20px;
@@ -288,9 +290,9 @@ input {
 				  1px 1px 0 white,
 				 1px -1px 0 white;
 				-1px -1px 0 white;
-}
+} */
 
-.text-overlay-2 {
+/* .text-overlay-2 {
   margin: 6vh;
   margin-left: 2.5vw;
   color: black;
@@ -302,7 +304,7 @@ input {
 				  1px 1px 0 white,
 				 1px -1px 0 white;
 				-1px -1px 0 white;
-}
+} */
 
 .tint-overlay {
   background-color: rgba(0,0,0,.3);
@@ -318,19 +320,19 @@ input {
   background-color: #689cc5;
 }
 
-.text-overlay-3 {
+/* .text-overlay-3 {
   margin-top: 15vh;
   margin-left: 2vh;
   color: white;
   position: absolute;
   z-index: 3;
-}
+} */
 
 .container-image {
   height: 25vh;
   width: 100%;
   z-index: 1;
-  background: 
+  /* background:  */
 }
 
 .name-text, 
@@ -368,7 +370,7 @@ input {
   /* border: 0.01rem solid black;
   box-sizing: border-box;
   /* background-color:yellow; */
-  /* color: black; */ */
+  /* color: black; */
   cursor: pointer;
 }
 
