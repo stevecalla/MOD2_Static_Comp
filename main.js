@@ -124,7 +124,7 @@ function createCharacterCards(data) { //what is this doing? === creating the cha
       <article class='character-box'>          
         <div class='tint-overlay'></div>
         <div class='image-box'>
-          <img rel="preload" class='container-image' src ='${data[i].thumbnail.path}.${data[i].thumbnail.extension}'
+          <img rel="preload" as='image' class='container-image' src ='${data[i].thumbnail.path}.${data[i].thumbnail.extension}'
             alt='${data[i].name}'>
         </div>
         <h1 class='name-text' role='heading'>${data[i].name}</h1>
