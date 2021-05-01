@@ -1,30 +1,19 @@
-// @import './reset';
-// @import './normalize';
+@use './reset';
+@import './normalize';
+@import './mixins';
 @import './variables';
 
-body {
-  background: $background-test;
-  // color: $text-white;
-  // font-family: map-get($font-styles, script);
-
-  // .main:hover {
-  //   background: $hover-color;
-  // }
-
-}
-
-
-html, 
-body,
-.character-boxes {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  font-family: sans-serif, 'Roboto';
+// html, 
+// body,
+// .character-boxes {
+  // height: 100%;
+  // width: 100%;
+  // // margin: 0;
+  // font-family: sans-serif, 'Roboto';
   /* font-family: 'Freckle Face', cursive; */
   /* font-family: 'Luckiest Guy', cursive; */
-  overflow: hidden;  
-}
+  // overflow: hidden;  
+// }
 
 /* ---------------- HEADER --------------- */
 .header {
@@ -35,13 +24,13 @@ body,
 
 .admin,
 .admin-box {
-  display: flex;
-  justify-content: space-between;
-  justify-content: center;
-  align-items: center;
+  @include flexJustifyAlignCenter;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   height: 10vh;
   font-size: 1.2rem;
-  color: #689cc5;
+  color: $text-color;
 }
 
 h1 {
@@ -49,10 +38,11 @@ h1 {
 }
 
 nav {
-  display: flex;
-  justify-content: flex-start;
-  justify-content: center;
-  align-items: center;
+  @include flexJustifyAlignCenter;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // justify-content: flex-start;
 }
 
 .nav-icon {
@@ -71,8 +61,9 @@ nav {
 
 /* ---------------- MAIN --------------- */
 main {
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
+  // display: flex;
+  // flex-direction: column;
   background: whitesmoke; 
 }
 
@@ -94,7 +85,7 @@ main {
   padding: 2px;
   padding-left: .75rem;
   padding-right: .75rem;
-  background-color: #689cc5;
+  background-color: $text-color;
   color: black;
   font-size: 24px;
   font-weight: bold;
@@ -112,7 +103,7 @@ span {
   justify-content: space-between;
   height: 350px;
   width: 300px;
-  background-color: #689cc5;
+  background-color: $text-color;
   color: white;
   color: black;
   font-size: 16px;
@@ -131,7 +122,7 @@ span {
   border-left: 12px solid transparent;
   margin-top: .5rem;
   border-right: 12px solid transparent;
-  border-bottom: 12px solid #689cc5;
+  border-bottom: 12px solid $text-color;
   position: absolute;
   z-index: 4;
   right: 40px;
@@ -202,13 +193,13 @@ button:hover {
 }
 
 .show {
-  display: block;
   display: flex;
 }
 
 .load-icon-containter {
-  display: flex;
-  justify-content: center;
+  @include flexJustifyCenter;
+  // display: flex;
+  // justify-content: center;
 }
 
 .load-icon {
@@ -226,24 +217,25 @@ button:hover {
 
 .character-box {
   border: .01em solid black;
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
+  // display: flex;
+  // flex-direction: column;
   height: 425px;
   width: 325px;
   margin: 1vh;
-  background: white;
+  background: $background-character-box;
   box-shadow: 5px 0px 5px gray;
   overflow: scroll;
   position: relative;
 }
 
 .character-box:hover {
-  background-color: red;
-  background-color: lightsteelblue;
-  background-color: royalblue;
-  background-color: black;
-  background-color: #689cc5;
-  color: white;
+  // background-color: red;
+  // background-color: lightsteelblue;
+  // background-color: royalblue;
+  // background-color: black;
+  // background-color: $text-color;
+  // color: white;
   color: black;
 }
 
@@ -263,7 +255,7 @@ input {
 .arrow-image {
   height: 10vh;
   width: 10vh;
-  background-color: #689cc5;
+  background-color: $text-color;
 }
 
 .container-image {
@@ -298,8 +290,8 @@ input {
   margin: 1vh 1.5vh 1vh 1.7vh;
   text-align: center;
   font-size: 20px;
-  background: white;
-  background-color:white;
+  background: $background-character-box;
+  background-color:v$background-character-box;
   text-decoration: none;
 }
 
@@ -317,10 +309,6 @@ input {
 /* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
 @media screen and (max-width: 1025px) {
 
-  h1 {
-    text-align: center;
-  }
-
   .page-header {
     margin-top: 2.5rem;
   }
@@ -330,15 +318,17 @@ input {
   @media screen and (max-width: 640px) { 
 
   .header {
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
+    // display: flex;
+    // flex-direction: column;
     justify-content: flex-start;
     color: white;
     height: 18vh;
   }
 
   .admin {
-    justify-content: center;
+    @include flexJustifyCenter;
+    // justify-content: center;
     height: 5vh;
     margin: 0;
   }
@@ -359,8 +349,9 @@ input {
   
   nav {
     border: 0.1 solid white;
-    display: flex;
-    justify-content: center;
+    @include flexJustifyCenter;
+    // display: flex;
+    // justify-content: center;
     margin-top: 2rem;
   }
 
@@ -369,10 +360,11 @@ input {
   }
 
   .character-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColumnJustifyAlignCenter;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
     margin: 0;
   }
 
@@ -394,8 +386,10 @@ input {
   }
 
   .marvel-attribution {
-    justify-content: center;
-    align-content: center;
+    @include flexJustifyAlignCenter;
+    // justify-content: center;
+    // align-items: center;
   }
   
 }
+
