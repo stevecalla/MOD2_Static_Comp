@@ -1,0 +1,40 @@
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexColumnJustifyAlignCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexJustifyCenter {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexJustifyAlignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexJustifyAlignEnd {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+@mixin medium-screen {
+  @media screen and (max-width: $mediumscreen) {
+    @content;
+  }
+}
+
+@mixin small-screen {
+  @media screen and (max-width: variables.$smallscreen) {
+    @content;
+  }
+}

@@ -1,0 +1,10 @@
+.marvel-attribution {
+  @include flexJustifyAlignEnd;
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  padding-right: 1vw;
+  @include small-screen {
+    @include flexJustifyAlignCenter;
+  }
+}
