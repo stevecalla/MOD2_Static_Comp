@@ -1,10 +1,10 @@
-@import './reset';
-// @import './normalize';
+@use './reset';
+@use './variables';
 @import './mixins';
-@import './variables';
+// @import './normalize';
 @import './header';
-@import './footer';
+@import './character-nav';
+@import './checkbox-form';
 @import './load-icon';
 @import './character-box';
-@import './checkbox-form';
-@import './character-nav';
+@import './footer';

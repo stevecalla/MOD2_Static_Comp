@@ -34,7 +34,7 @@
 }
 
 @mixin small-screen {
-  @media screen and (max-width: $smallscreen) {
+  @media screen and (max-width: variables.$smallscreen) {
     @content;
   }
 }
