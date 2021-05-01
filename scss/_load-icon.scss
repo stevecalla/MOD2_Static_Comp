@@ -1,0 +1,12 @@
+/*------------- START LOAD ICON ----------------- */
+
+.load-icon-containter {
+  @include flexJustifyCenter;
+}
+
+.load-icon {
+  height: 30vh;
+  width: 30vh;
+}
+
+/*------------- END LOAD ICON ----------------- */

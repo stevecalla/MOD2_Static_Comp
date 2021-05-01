@@ -1,0 +1,37 @@
+.header-box {
+  @include flexColumnJustifyAlignCenter;
+  height: 20vh;
+  margin: 0;
+  background-color: #2B2B2B;
+
+  .page-header {
+    margin: 0;
+    color: $text-color;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+
+nav {
+  @include flexJustifyAlignCenter;
+  @include small-screen {
+    border: 0.1 solid white;
+    @include flexJustifyCenter;
+  }
+}
+
+.nav-icon {
+  height: 5vh;
+  width: 5vh;
+  margin-left: 2vh;
+}
+
+.nav-links {
+  color: $link-color;
+}
+
+.todo-icon {
+  @include small-screen {
+    margin-left: 0;
+  }
+}

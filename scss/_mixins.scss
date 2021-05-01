@@ -21,14 +21,20 @@
   align-items: center;
 }
 
-@mixin small-screen {
-  @media screen and (max-width: $smallscreen) {
-    @content;
-  }
+@mixin flexJustifyAlignEnd {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
 }
 
 @mixin medium-screen {
   @media screen and (max-width: $mediumscreen) {
+    @content;
+  }
+}
+
+@mixin small-screen {
+  @media screen and (max-width: $smallscreen) {
     @content;
   }
 }
