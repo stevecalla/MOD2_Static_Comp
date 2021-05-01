@@ -20,3 +20,15 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin small-screen {
+  @media screen and (max-width: $smallscreen) {
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media screen and (max-width: $mediumscreen) {
+    @content;
+  }
+}

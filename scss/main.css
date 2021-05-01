@@ -351,6 +351,31 @@ template {
   color: white;
 }
 
+@media screen and (max-width: 640px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 18vh;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .header .page-header {
+    margin-top: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header .page-header {
+    margin-top: 4rem;
+  }
+}
+
 .admin,
 .admin-box {
   display: -webkit-box;
@@ -367,10 +392,20 @@ template {
   color: #689cc5;
 }
 
-h1 {
-  text-align: center;
+@media screen and (max-width: 640px) {
+  .admin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 5vh;
+    margin: 0;
+  }
 }
 
+/*---------------- NAV---------------*/
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -409,8 +444,6 @@ main {
   background: whitesmoke;
 }
 
-/* ----------------- DEFAULT MEDIUM SCREEN -------------- */
-/* @media screen and (min-width: 640px) and (max-width: 1024px){ */
 .character-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -630,6 +663,7 @@ input {
 .count-text {
   margin-left: 1.5vh;
   margin: .25vh 1.5vh .25vh 1.5vh;
+  text-align: center;
 }
 
 .name-text {
@@ -673,41 +707,7 @@ input {
 }
 
 /* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
-@media screen and (max-width: 1025px) {
-  .page-header {
-    margin-top: 2.5rem;
-  }
-}
-
-/* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
 @media screen and (max-width: 640px) {
-  .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    color: white;
-    height: 18vh;
-  }
-  .admin {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 5vh;
-    margin: 0;
-  }
-  .admin-box {
-    display: none;
-  }
   .detail-text {
     margin: 0;
     margin-top: 0.5rem;

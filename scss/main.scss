@@ -15,34 +15,55 @@
   // overflow: hidden;  
 // }
 
+
+
 /* ---------------- HEADER --------------- */
 .header {
   background-color: #2B2B2B;
   height: 20vh;
   color: white;
+
+  @include small-screen {
+    @include flexColumn;
+    // justify-content: flex-start;
+    // color: white;
+    height: 18vh;
+  }
+
+  @include medium-screen {
+    .page-header {
+      margin-top: 2.5rem;
+    }
+  }
+
+  @include small-screen {
+    .page-header {
+      margin-top: 4rem;
+    }
+  }
 }
 
 .admin,
 .admin-box {
   @include flexJustifyAlignCenter;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   height: 10vh;
   font-size: 1.2rem;
   color: $text-color;
+
 }
 
-h1 {
-  text-align: center;
+.admin {
+  @include small-screen {
+    @include flexJustifyCenter;
+    height: 5vh;
+    margin: 0;
+  }
 }
+
+/*---------------- NAV---------------*/
 
 nav {
   @include flexJustifyAlignCenter;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // justify-content: flex-start;
 }
 
 .nav-icon {
@@ -62,13 +83,8 @@ nav {
 /* ---------------- MAIN --------------- */
 main {
   @include flexColumn;
-  // display: flex;
-  // flex-direction: column;
   background: whitesmoke; 
 }
-
-/* ----------------- DEFAULT MEDIUM SCREEN -------------- */
-/* @media screen and (min-width: 640px) and (max-width: 1024px){ */
 
 .character-nav {
   display: flex;
@@ -230,12 +246,6 @@ button:hover {
 }
 
 .character-box:hover {
-  // background-color: red;
-  // background-color: lightsteelblue;
-  // background-color: royalblue;
-  // background-color: black;
-  // background-color: $text-color;
-  // color: white;
   color: black;
 }
 
@@ -269,6 +279,7 @@ input {
 .count-text {
   margin-left: 1.5vh;
   margin: .25vh 1.5vh .25vh 1.5vh; 
+  text-align: center;
 }
 
 .name-text {
@@ -307,35 +318,7 @@ input {
 }
 
 /* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
-@media screen and (max-width: 1025px) {
-
-  .page-header {
-    margin-top: 2.5rem;
-  }
-}
-
-/* ----------------- MEDIA QUERY SMALL SCREEN -------------- */
-  @media screen and (max-width: 640px) { 
-
-  .header {
-    @include flexColumn;
-    // display: flex;
-    // flex-direction: column;
-    justify-content: flex-start;
-    color: white;
-    height: 18vh;
-  }
-
-  .admin {
-    @include flexJustifyCenter;
-    // justify-content: center;
-    height: 5vh;
-    margin: 0;
-  }
-
-  .admin-box {
-    display: none;
-  }
+@media screen and (max-width: 640px) { 
 
   .detail-text {
     margin: 0;
